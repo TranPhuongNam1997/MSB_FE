@@ -3,13 +3,27 @@
 // ======================================================
 
 .container-login{
-  max-width: 1140px;
-  padding: 0 5px;
+  max-width: 1230px;
+  padding: 0 15px;
   width: 100%;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  @include tablet{
+    width: 374px;
+  }
+  @include mobile{
+    width: 320px;
+  }
 }
 .row-login{
-  margin: 0 35px;
+  margin: 0 -4px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .row-vsd{
   margin: 0 -6px;
@@ -24,4 +38,31 @@
   flex: 0 0 50%;
   max-width: 50%;
   position: relative;
+}
+.col-msb-30{
+  padding: 0 15px;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  @include tablet{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+}
+.col-msb-70{
+  padding: 0 15px;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
+  @include tablet{
+    display: none;
+  }
+}
+.col-login-6{
+  padding: 0 4px;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }

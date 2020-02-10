@@ -1,5 +1,44 @@
 // ======================================================
 // Components :: Button
 // ======================================================
-
-//css inputupload
+.remember-login input[type="checkbox"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: -5px;
+}
+.remember-login input[type="checkbox"]:checked:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  display: table;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top-width: 0px;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.remember-login input[type="checkbox"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  border: 1px solid #bbb;
+  -webkit-transition: 240ms;
+  transition: 240ms;
+  border-radius: 50%;
+  background: #fff;
+}
+.remember-login input[type="checkbox"]:checked:after{
+  background-color: #F37021;
+  border-color: #F37021;
+}

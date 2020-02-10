@@ -10,8 +10,8 @@ body{
   margin: 0;
   padding: 0;
   background: #fff;
-  color: #3d3d3d;
-  font-size: 13px;
+  color: #000;
+  font-size: 14px;
   line-height: 16px;
   font-family: "Arial";
 
@@ -37,16 +37,21 @@ html, body {
   width: 100%;
 }
 .main{
-  padding-top: 76px;
-  @include tablet{
-    padding-top: 66px;
-  }
-  @include mobile-horizontal{
-    padding-top: 86px;
-  }
+  //padding-top: 76px;
+  //@include tablet{
+  //  padding-top: 66px;
+  //}
+  //@include mobile-horizontal{
+  //  padding-top: 86px;
+  //}
 }
 .push{
   height: 147px;
+}
+.dp-flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .overlay{
   background: rgba(22, 73, 137, 0.38823529411764707);
@@ -63,12 +68,12 @@ select{
   -moz-appearance:none;
   appearance:none;
   position: relative;
-  background: url("../img/icon-down-select-12.svg");
+  background: url("../img/icon-caret-down-02.svg");
   background-repeat: no-repeat;
   background-position: center right 16px;
   background-size: 8px 5px;
   &.select-icon-up{
-    background: url("../img/icon-up-select-12.svg") no-repeat;
+    background: $c-wh url("../img/icon-up-select-03.svg") no-repeat;
     background-position: center right 16px;
     background-size: 8px 5px;
   }
@@ -88,11 +93,11 @@ select{
 
 label.error {
   color: #ED1111;
-  padding-top: 5px;
+  padding-top: 0;
   padding-left: 24px;
-  background: url(../img/icon-checkvalidate.svg) no-repeat top 4px left;
+  background: url(../img/icon-checkvalidate.svg) no-repeat top 0 left;
   background-size: 16px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 //css popup
