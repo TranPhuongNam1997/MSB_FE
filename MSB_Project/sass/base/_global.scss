@@ -98,6 +98,9 @@ label.error {
   background: url(../img/icon-checkvalidate.svg) no-repeat top 0 left;
   background-size: 16px;
   margin-bottom: 15px;
+  @include mobile-horizontal{
+    margin-bottom: 10px;
+  }
 }
 
 //css popup

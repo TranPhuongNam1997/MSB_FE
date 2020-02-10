@@ -118,6 +118,9 @@ label.error {
   background: url(../img/icon-checkvalidate.svg) no-repeat top 0 left;
   background-size: 16px;
   margin-bottom: 15px; }
+  @media only screen and (max-width: 767px) {
+    label.error {
+      margin-bottom: 10px; } }
 
 .datepicker-vsd {
   background: #fff url(../img/icon-cacular.svg) no-repeat;
@@ -194,6 +197,9 @@ label.error {
 
 .change-language {
   margin-bottom: 37px; }
+  @media only screen and (max-width: 767px) {
+    .change-language {
+      margin-bottom: 20px; } }
   .change-language li svg {
     vertical-align: text-top; }
   .change-language li span {
@@ -203,11 +209,19 @@ label.error {
 
 .logo {
   margin-bottom: 27px; }
+  @media only screen and (max-width: 767px) {
+    .logo {
+      margin-bottom: 20px; } }
+  .logo a {
+    display: block; }
 
 .txt-login {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 25px; }
+  @media only screen and (max-width: 767px) {
+    .txt-login {
+      margin-bottom: 20px; } }
 
 .data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed input:valid ~ label.lbl-field, .data-filed select:valid ~ label.lbl-field {
   font-size: 12px;
@@ -227,6 +241,9 @@ label.error {
     padding: 15px 13px;
     margin-bottom: 15px;
     outline-color: #F37021; }
+    @media only screen and (max-width: 767px) {
+      .data-filed input, .data-filed select {
+        margin-bottom: 10px; } }
     .data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field {
       color: #F37021; }
   .data-filed input {

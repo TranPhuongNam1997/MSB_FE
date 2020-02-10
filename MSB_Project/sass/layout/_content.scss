@@ -12,6 +12,9 @@
 }
 .change-language{
   margin-bottom: 37px;
+  @include mobile-horizontal{
+    margin-bottom: 20px;
+  }
   li{
     svg{
       vertical-align: text-top;
@@ -25,11 +28,25 @@
 }
 .logo{
   margin-bottom: 27px;
+  @include mobile-horizontal{
+    margin-bottom: 20px;
+  }
+  a{
+    display: block;
+  }
+  //svg{
+  //  @include mobile-horizontal{
+  //    height: 45px;
+  //  }
+  //}
 }
 .txt-login{
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 25px;
+  @include mobile-horizontal{
+    margin-bottom: 20px;
+  }
 }
 
 %label-movement{
@@ -50,6 +67,9 @@
     padding: 15px 13px;
     margin-bottom: 15px;
     outline-color: #F37021;
+    @include mobile-horizontal{
+      margin-bottom: 10px;
+    }
     &:focus{
       ~ label.lbl-field{
         @extend %label-movement;
