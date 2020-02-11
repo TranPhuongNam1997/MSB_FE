@@ -1,7 +1,10 @@
 // ======================================================
 // Components :: Button
 // ======================================================
-.remember-login input[type="checkbox"] {
+input[type="checkbox"][disabled="disabled"]{
+  background: transparent;
+}
+input[type="checkbox"] {
   position: relative;
   border: none;
   margin-bottom: -4px;
@@ -12,7 +15,7 @@
   outline: none;
   margin-top: -5px;
 }
-.remember-login input[type="checkbox"]:checked:before {
+input[type="checkbox"]:checked:before {
   content: "";
   position: absolute;
   top: 3px;
@@ -26,7 +29,7 @@
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.remember-login input[type="checkbox"]:after {
+input[type="checkbox"]:after {
   content: "";
   display: block;
   width: 18px;
@@ -38,7 +41,54 @@
   border-radius: 50%;
   background: #fff;
 }
-.remember-login input[type="checkbox"]:checked:after{
+input[type="checkbox"]:checked:after{
   background-color: #F37021;
   border-color: #F37021;
+}
+.btn-green{
+  background: #45AA1B;
+  font-weight: 700;
+  color: $c-wh;
+  border-radius: 4px;
+  border: none;
+  padding: 11px 47px 13px 43px;
+  transition: all 0.3s;
+  &:hover{
+    background: #539c35;
+    transition: all 0.3s;
+  }
+}
+
+.btn-search{
+  height: 50px;
+  background: #FEF6F1;
+  color: #DA2128;
+  padding: 15px 101px;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s;
+  &:hover{
+    background: #ffc7a4;
+    transition: all 0.3s;
+  }
+}
+.sell-tb{
+  background: #FCDBC7;
+  color: #DA2128;
+  border: none;
+  padding: 3px 25px;
+  border-radius: 2px;
+  &:hover{
+    background: #ffcdb0;
+  }
+}
+.buy-tb{
+  background: #E0FFD2;
+  color: #45AA1B;
+  border: none;
+  padding: 3px 25px;
+  border-radius: 2px;
+  &:hover{
+    background: #cbffb4;
+  }
 }

@@ -1,3 +1,89 @@
 // ======================================================
 // Layout :: Header
 // ======================================================
+header{
+  background: #fff;
+  z-index: 9;
+  box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.102);
+  position: fixed;
+  width: 100%;
+}
+.head-msb{
+  padding: 0 30px 0 39px;
+  .head-left{
+    .menu-private{
+      float: left;
+      margin-top: 35px;
+      margin-bottom: 33px;
+      button{
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+    }
+    .logo-msb{
+      float: left;
+      margin: 19px 73px 23px 34px;
+      h1{
+        margin-bottom: 0;
+        a{
+          img{
+            height: 43px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.notification{
+  display: inline-block;
+  height: 51px;
+  width: 51px;
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 46px;
+  transition: all 0.3s;
+  &:hover{
+    background: #E33C26;
+    transition: all 0.3s;
+  }
+}
+.user-block{
+  position: relative;
+  display: inline-block;
+  border: 1px solid #E5E5E5;
+  padding: 7px 46px 7px 10px;
+  border-radius: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover{
+    transition: all 0.2s;
+    background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%);
+    .name-user{
+      color: $c-wh;
+      .id-user{
+        color: $c-wh;
+      }
+    }
+  }
+  .avatar-user{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 31px;
+    background: #f9f9f9;
+    border-radius: 50%;
+    margin-right: 19px;
+  }
+  .name-user{
+    font-size: 16px;
+    .id-user{
+      color: #7f7f7f;
+      font-size: 12px;
+    }
+  }
+}

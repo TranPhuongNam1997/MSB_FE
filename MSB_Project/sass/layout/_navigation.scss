@@ -1,3 +1,101 @@
 // ======================================================
 // Layout :: Navigation
 // ======================================================
+.navigation{
+  float: left;
+}
+.menu{
+  li{
+    float: left;
+    margin: 0 18px;
+    position: relative;
+    &.active a{
+      color: $c-or;
+    }
+    &.active:after{
+      transform: translateX(-50%) scaleX(1);
+    }
+    a{
+      display: block;
+      padding: 35px 0 39px;
+      color: #303030;
+      font-weight: 700;
+      transition: all 0.3s;
+      position: relative;
+      &:hover{
+        color: $c-or;
+        transition: all 0.3s;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        transform: translateX(-50%) scaleX(0);
+        left: 50%;
+        background: $c-or;
+        z-index: 1;
+        pointer-events: none;
+        border-radius: 30px;
+        transition: all 0.3s;
+
+      }
+      &:hover:after{
+        transform: translateX(-50%) scaleX(1);
+        transition: all 0.3s;
+      }
+    }
+
+  }
+}
+
+//.menu{
+//  li{
+//    float: left;
+//    padding: 0 18px;
+//    position: relative;
+//    cursor: pointer;
+//    &.active a{
+//      color: $c-or;
+//    }
+//    &.active:after{
+//      transform: translateX(-50%) scaleX(1);
+//    }
+//    a{
+//      display: block;
+//      padding: 35px 0 39px;
+//      color: #303030;
+//      font-weight: 700;
+//      transition: all 0.3s;
+//      position: relative;
+//      &:hover{
+//        color: $c-or;
+//        transition: all 0.3s;
+//      }
+//      &:after{
+//        content: '';
+//        position: absolute;
+//        bottom: 0;
+//        width: 100%;
+//        height: 5px;
+//        transform: translateX(-50%) scaleX(0);
+//        left: 50%;
+//        background: $c-or;
+//        z-index: 1;
+//        pointer-events: none;
+//        border-radius: 30px;
+//
+//      }
+//    }
+//    &:hover{
+//      a{
+//        &:after{
+//          transform: translateX(-50%) scaleX(1);
+//          transition: all 0.3s;
+//        }
+//      }
+//    }
+//
+//  }
+//}

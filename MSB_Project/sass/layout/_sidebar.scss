@@ -1,3 +1,123 @@
 // ======================================================
 // Layout :: Sidebar
 // ======================================================
+
+.sidebar{
+  background: #fff;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.txt-heading{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+
+}
+.sidebar-heading{
+  padding: 16px 31px;
+}
+.tab-content{
+
+}
+.nav-tabs{
+  border-bottom: 0;
+  .nav-item{
+    display: inline-block;
+    .nav-link{
+      display: block;
+      width: 91px;
+      padding: 9px 0 10px;
+      height: 35px;
+      border-radius: 30px;
+      color: $c-59;
+      text-align: center;
+      margin-left: 5px;
+      &:hover{
+        background: #45AA1B;
+        color: $c-wh;
+      }
+    }
+    .nav-link.active{
+      color: $c-wh;
+      background:  #45AA1B;
+      border-color: transparent;
+    }
+  }
+}
+.sidebar-top{
+  padding: 1px 29px 25px 29px;
+}
+.enter-command{
+  padding: 12px 20px 6px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  margin-bottom: 17px;
+}
+.txt-enter-command{
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.interest-price{
+  margin: 0 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .lbl-main-left{
+    width: calc(100% - 130px);
+  }
+
+}
+.ip-50{
+  width: 130px;
+  height: 31px;
+  input{
+    height: 31px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #EAEAEA;
+    padding: 4px 14px;
+  }
+}
+.interest-price.block-disable{
+  .lbl-main-left{
+    label{
+      color: #7C7C7C;
+    }
+  }
+}
+.purchasing-ability{
+  padding: 0 13px 15px 13px;
+  border-bottom: 1px solid #EAEAEA;
+}
+.lbl-txt-main{
+  display: inline-block;
+  color: #595959;
+  font-size: 12px;
+  min-width: 48px;
+  margin-right: 14px;
+}
+.currency-unit{
+  color: $c-59;
+  margin-left: 2px;
+}
+.number{
+  display: inline-block;
+}
+.charge-tax{
+  padding: 15px 13px 0px;
+}
+
+.sidebar-bottom{
+  background: #F9FFF9;
+  padding: 20px 19px;
+  border-top: 1px dashed #EAEAEA;
+}
+.number-money{
+  font-size: 16px;
+  font-weight: 700;
+  color: #45AA1B;
+}
+.txt-plus-money{
+  margin-bottom: 3px;
+}
+

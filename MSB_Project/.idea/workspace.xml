@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed6bd84-cf0b-4409-b6d7-5bf6034ff100" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/js/script-datetimepicker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/css/owl.carousel2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/css/owl.theme2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/css/viewbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/js/owl.carousel2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/js/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/abstracts/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/base/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/layout/_content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_content.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set-command.html" beforeDir="false" afterPath="$PROJECT_DIR$/set-command.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -82,6 +98,8 @@
       <workItem from="1581128679746" duration="2583000" />
       <workItem from="1581297727230" duration="18764000" />
       <workItem from="1581328794600" duration="1287000" />
+      <workItem from="1581330516987" duration="281000" />
+      <workItem from="1581384438054" duration="28340000" />
     </task>
     <servers />
   </component>

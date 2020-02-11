@@ -1,9 +1,9 @@
 $( document ).ready(function() {
 
 
-    var getchieucao = $("footer").height();
-    $(".push").css({"height": getchieucao + 38});
-    $(".wrapper").css({"margin-bottom": -(getchieucao + 38)});
+    // var getchieucao = $("footer").height();
+    // $(".push").css({"height": getchieucao + 38});
+    // $(".wrapper").css({"margin-bottom": -(getchieucao + 38)});
 
     // js navigation
     $(".menucate-lv2").hide();

@@ -9,20 +9,29 @@
 
     <link rel="icon" href="img/favicon.png" />
     <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/css/font-awesome.css">
+    <link rel="stylesheet" href="libs/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="libs/css/daterangepicker.css">
+
     <link rel="stylesheet" href="sass/main.css">
 
     <script type="text/javascript" src="libs/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="libs/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="libs/js/moment.min.js"></script>
+    <script type="text/javascript" src="libs/js/daterangepicker.min.js"></script>
+
     <script src="libs/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="libs/js/script.js"></script>
     <script src="libs/js/script-checkvalidate.js"></script>
+    <script src="libs/js/script-datetimepicker.js"></script>
 
 </head>
 <body>
     <div class="wrapper">
         <header>
-             <div class="head-msb">
-                 <div class="head-left pull-left">
+             <div class="head-msb dp-flex-between">
+                 <div class="head-left clearfix">
                      <div class="menu-private">
                          <button><img src="img/icon-bars.svg" alt="ảnh"></button>
                      </div>
@@ -31,8 +40,8 @@
                      </div>
                      <div class="navigation">
                          <nav>
-                             <ul class="menu">
-                                 <li><a href="#">Đặt lệnh</a></li>
+                             <ul class="menu clearfix">
+                                 <li class="active"><a href="#">Đặt lệnh</a></li>
                                  <li><a href="#">Tài sản</a></li>
                                  <li><a href="#">Sổ lệnh</a></li>
                                  <li><a href="#">Cầm cố</a></li>
@@ -42,13 +51,429 @@
                      </div>
                  </div>
                  <div class="head-righ pull-right">
-                     <a class="notification">
-
+                     <a href="#" class="notification">
+                         <img src="img/icon-noti.svg" alt="ảnh">
                      </a>
+                     <div class="user-block">
+                         <div class="dp-flex-between">
+                             <div class="avatar-user">
+                                 <img src="img/avt-user.png" alt="ảnh">
+                             </div>
+                             <div class="name-user">
+                                 <div class="txt-name-user">Lư Tuấn Anh</div>
+                                 <div class="id-user">105C847224</div>
+                             </div>
+                         </div>
+                         <div class="info-user">
+                            
+                         </div>
+                     </div>
                  </div>
              </div>
         </header>
         <main class="main-wrap">
+
+            <div class="row-msb-9">
+                <div class="col-msb-22">
+                    <div class="sidebar">
+                        <div class="sidebar-heading dp-flex-between">
+                            <h3 class="txt-heading">Đặt lệnh</h3>
+                            <div class="item-tab">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#buy">Mua</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#sell">Bán</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="buy" class="tab-pane active">
+                                <form action="#">
+                                    <div class="sidebar-top">
+                                        <div class="data-filed">
+                                            <select class="box-enter select-login" name="" required>
+                                                <option value="" selected disabled hidden>Chọn trái phiếu</option>
+                                                <option value="Nhóm tài khoản 1">NHN102020</option>
+                                                <option value="Nhóm tài khoản 1">NHN102020</option>
+                                            </select>
+                                            <label class="lbl-field">Chọn trái phiếu</label>
+                                        </div>
+                                        <div class="data-filed">
+                                            <input type="text" class="" name="daterange" required>
+                                            <label class="lbl-field">Từ ngày đến ngày</label>
+                                        </div>
+                                        <div class="enter-command">
+                                            <div class="txt-enter-command">Nhập lệnh theo lãi suất hoặc đơn giá</div>
+                                            <div class="interest-price dp-flex-between">
+                                                <div class="lbl-main-left">
+                                                    <input type="checkbox" id="">
+                                                    <label for="">Lãi suất (% năm)</label>
+                                                </div>
+                                                <div class="ip-50">
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                            <div class="interest-price block-disable dp">
+                                                <div class="lbl-main-left">
+                                                    <input type="checkbox" id="" disabled="disabled">
+                                                    <label >Đơn giá (VNĐ)</label>
+                                                </div>
+                                                <div class="ip-50">
+                                                    <input type="text" disabled="disabled">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-filed">
+                                            <input type="text" class="datepicker-msb" name="" required>
+                                            <label class="lbl-field">Nhập tên tài khoản</label>
+                                        </div>
+                                        <div class="purchasing-ability">
+                                            <div class="lbl-txt-main">Sức mua</div>
+                                            <div class="number">0</div>
+                                        </div>
+                                        <div class="charge-tax">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="lbl-txt-main">Phí</div>
+                                                    <div class="number"><span>0</span><span class="currency-unit">VNĐ</span></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="lbl-txt-main">Thuế</div>
+                                                    <div class="number"><span>0</span><span class="currency-unit">VNĐ</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-bottom">
+                                        <div class="dp-flex-between">
+                                            <div class="plus-money">
+                                                <div class="txt-plus-money">Tổng tiền đầu tư (VND)</div>
+                                                <div class="number-money">2,000.13</div>
+                                            </div>
+                                            <button type="submit" class="btn-green">Đặt mua</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="sell" class="tab-pane fade">
+                                <h1>ádasd</h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-msb-78">
+                    <div class="data-table">
+                        <div class="head-search">
+                            <div class="heading-search-block dp-flex-between">
+                                <h3 class="title-search">Bảng giá giao mua bán giấy tờ có giá</h3>
+                                <a href="#" class="view-right">
+                                    <img src="img/icon-history.svg" alt="ảnh">
+                                    <span>Lịch sử</span>
+                                </a>
+                            </div>
+
+                            <form action="#" class="clearfix">
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" class="datepicker-msb-none" placeholder="__/__/____" name="" required>
+                                        <label class="lbl-field">Ngày giao dịch</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Mã trái phiếu</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Đơn giá</label>
+                                    </div>
+                                </div>
+                                <button class="btn-search" type="button">Tìm kiếm</button>
+                            </form>
+                        </div>
+                        <div class="table-wrap">
+                            <div class="table-block">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Mã TP</th>
+                                            <th>KL rao mua</th>
+                                            <th><span class="caret-left"><i class="fa fa-caret-left"></i></span><span>LS cá nhân (%/năm)</span><span class="caret-right"><i class="fa fa-caret-right"></i></span></th>
+                                            <th>Đơn giá</th>
+                                            <th>KL rao bán</th>
+                                            <th>Giá TB tuần</th>
+                                            <th>Còn lại (tháng)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                               alt="ảnh"></span></a></td>
+                                        <td>4.636</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="sell-tb">Bán</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>8.82</td>
+                                        <td>8.6 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>4.636</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="buy-tb">Mua</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>8.82</td>
+                                        <td>8.6 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>4.636</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="buy-tb">Mua</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>8.82</td>
+                                        <td>8.6 </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>4.636</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="buy-tb">Mua</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>8.82</td>
+                                        <td>8.6 </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-table">
+                        <div class="head-search">
+                            <div class="heading-search-block dp-flex-between">
+                                <h3 class="title-search">Tài sản trái phiếu</h3>
+                                <a href="#" class="view-right">
+                                    <span>Xem chi tiết</span>
+                                </a>
+                            </div>
+
+                            <form action="#" class="clearfix">
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <select class="box-enter select-login" name="" required="">
+                                            <option value="" selected="" disabled="" hidden="">Khách hàng</option>
+                                            <option value="Nhóm tài khoản 1">NHN102020</option>
+                                            <option value="Nhóm tài khoản 1">NHN102020</option>
+                                        </select>
+                                        <label class="lbl-field">Khách hàng</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Mã trái phiếu</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Đơn giá</label>
+                                    </div>
+                                </div>
+                                <button class="btn-search" type="button">Tìm kiếm</button>
+                            </form>
+                        </div>
+                        <div class="table-wrap">
+                            <div class="table-block">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Mã trái phiếu</th>
+                                        <th>Khách hàng</th>
+                                        <th>Ngày đáo hạn</th>
+                                        <th>Số lượng</th>
+                                        <th>Lãi suất (%)</th>
+                                        <th>Tổng giá trị </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>MSB0001</td>
+                                        <td>20/10/2020</td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="sell-tb">Bán</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>MSB0001</td>
+                                        <td>20/10/2020</td>
+                                        <td>103.244</td>
+                                        <td>1000</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="buy-tb">Mua</button></div>
+                                                <div class="col-6">8.08</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-table">
+                        <div class="head-search">
+                            <div class="heading-search-block dp-flex-between">
+                                <h3 class="title-search">Số lệnh trái phiếu </h3>
+                                <a href="#" class="view-right">
+                                    <span>Xem chi tiết</span>
+                                </a>
+                            </div>
+
+                            <form action="#" class="clearfix">
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" class="datepicker-msb" name="" required>
+                                        <label class="lbl-field">Khách hàng</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Loại lệnh</label>
+                                    </div>
+                                </div>
+                                <div class="item-search">
+                                    <div class="data-filed">
+                                        <input type="text" name="" required>
+                                        <label class="lbl-field">Mã trái phiếu</label>
+                                    </div>
+                                </div>
+                                <button class="btn-search" type="button">Tìm kiếm</button>
+                            </form>
+                        </div>
+                        <div class="table-wrap">
+                            <div class="table-block">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Mã giao dịch</th>
+                                        <th>Ngày hiệu lực</th>
+                                        <th>Mã trái phiếu</th>
+                                        <th>Tài khoản KH</th>
+                                        <th>SL đặt</th>
+                                        <th>Lãi suất (%)</th>
+                                        <th>Sl khớp</th>
+                                        <th>Trạng thái</th>
+                                        <th>Chức năng</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>20/10/2020</td>
+                                        <td>SDI042020</td>
+                                        <td>MSB0001</td>
+                                        <td>1000</td>
+                                        <td>0.8%</td>
+                                        <td>1000</td>
+                                        <td><div class="status-pending">Chờ duyệt</div></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6"><button class="buy-tb">Duyệt</button></div>
+                                                <div class="col-6">-</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>20/10/2020</td>
+                                        <td>SDI042020</td>
+                                        <td>MSB0001</td>
+                                        <td>1000</td>
+                                        <td>0.8%</td>
+                                        <td>1000</td>
+                                        <td><div class="status-approved">Đã duyệt</div></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6">-</div>
+                                                <div class="col-6"><button class="sell-tb">Hủy</button></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="view-info">SDI042020 <span class="icon-info"><img src="img/icon-info.svg"
+                                                                                                                 alt="ảnh"></span></a></td>
+                                        <td>20/10/2020</td>
+                                        <td>SDI042020</td>
+                                        <td>MSB0001</td>
+                                        <td>1000</td>
+                                        <td>0.8%</td>
+                                        <td>1000</td>
+                                        <td><div class="status-cancelled">Đã hủy</div></td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6">-</div>
+                                                <div class="col-6">-</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer>

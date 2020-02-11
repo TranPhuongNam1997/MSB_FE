@@ -66,3 +66,24 @@
   flex: 0 0 50%;
   max-width: 50%;
 }
+.row-msb-9{
+  margin: 0 -9px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.col-msb-22{
+  padding: 0 9px;
+  -ms-flex: 0 0 22%;
+  flex: 0 0 22%;
+  max-width: 22%;
+  position: relative;
+}
+.col-msb-78{
+  padding: 0 9px;
+  -ms-flex: 0 0 78%;
+  flex: 0 0 78%;
+  max-width: 78%;
+  position: relative;
+}
