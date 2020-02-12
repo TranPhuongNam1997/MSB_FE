@@ -72,6 +72,9 @@ input[type="checkbox"]:checked:after{
   border-radius: 3px;
   transition: all 0.3s;
   margin-bottom: 15px;
+  @include lessdesktop{
+    padding: 15px 73px;
+  }
   &:hover{
     background: #ffc7a4;
     transition: all 0.3s;

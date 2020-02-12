@@ -190,7 +190,7 @@ input[name="daterange"] {
   padding-top: 132px; }
   @media only screen and (max-width: 1600px) {
     .main-wrap {
-      padding: 118px 25px 41px; } }
+      padding: 118px 18px 41px; } }
 
 input[disabled="disabled"] {
   background: #F4F4F4;
@@ -683,6 +683,9 @@ header {
 
 .sidebar-heading {
   padding: 16px 31px; }
+  @media only screen and (max-width: 1600px) {
+    .sidebar-heading {
+      padding: 16px 18px; } }
 
 .nav-tabs {
   border-bottom: 0; }
@@ -710,6 +713,9 @@ header {
 
 .sidebar-top {
   padding: 1px 29px 25px 29px; }
+  @media only screen and (max-width: 1600px) {
+    .sidebar-top {
+      padding: 1px 18px 25px; } }
 
 .enter-command {
   padding: 12px 20px 6px;
@@ -778,6 +784,9 @@ header {
   background: #F9FFF9;
   padding: 20px 29px;
   border-top: 1px dashed #EAEAEA; }
+  @media only screen and (max-width: 1600px) {
+    .sidebar-bottom {
+      padding: 20px 18px; } }
 
 .number-money {
   font-size: 16px;
@@ -909,6 +918,9 @@ header {
 .head-search {
   padding: 21px 27px 6px;
   background: #fff; }
+  @media only screen and (max-width: 1600px) {
+    .head-search {
+      padding: 21px 18px 6px; } }
   .head-search .title-search {
     font-weight: 700;
     font-size: 18px;
@@ -921,6 +933,9 @@ header {
   @media only screen and (max-width: 1600px) {
     .item-search {
       width: 241px; } }
+  @media only screen and (max-width: 1600px) {
+    .item-search {
+      width: 210px; } }
 
 .table-wrap {
   padding-bottom: 20px;
@@ -938,11 +953,19 @@ header {
       border: 1px solid #EAEAEA;
       padding: 15px 30px;
       font-weight: 500; }
+      @media only screen and (max-width: 1600px) {
+        .table-wrap .table-block table thead tr th {
+          padding: 15px 18px; } }
+      .table-wrap .table-block table thead tr th.w-225 {
+        width: 225px; }
   .table-wrap .table-block table tbody tr {
     background: #fff; }
     .table-wrap .table-block table tbody tr td {
       padding: 15px 30px;
       border: 1px solid #EAEAEA; }
+      @media only screen and (max-width: 1600px) {
+        .table-wrap .table-block table tbody tr td {
+          padding: 15px 18px; } }
 
 .caret-left {
   margin-right: 11px; }
@@ -1068,6 +1091,9 @@ input[type="checkbox"]:checked:after {
   border-radius: 3px;
   transition: all 0.3s;
   margin-bottom: 15px; }
+  @media only screen and (max-width: 1600px) {
+    .btn-search {
+      padding: 15px 73px; } }
   .btn-search:hover {
     background: #ffc7a4;
     transition: all 0.3s; }

@@ -15,6 +15,9 @@
 }
 .sidebar-heading{
   padding: 16px 31px;
+  @include lessdesktop{
+    padding: 16px 18px;
+  }
 }
 .tab-content{
 
@@ -49,6 +52,9 @@
 }
 .sidebar-top{
   padding: 1px 29px 25px 29px;
+  @include lessdesktop{
+    padding: 1px 18px 25px;
+  }
 }
 .enter-command{
   padding: 12px 20px 6px;
@@ -125,6 +131,9 @@
   background: #F9FFF9;
   padding: 20px 29px;
   border-top: 1px dashed #EAEAEA;
+  @include lessdesktop{
+    padding: 20px 18px;
+  }
 }
 .number-money{
   font-size: 16px;
