@@ -84,7 +84,13 @@ $( document ).ready(function() {
        $(".view-menu-mb").trigger('click');
     });
 
-
+    if (window.innerWidth < 992) {
+        $(".info-user-wrap").hide();
+        $(".user-block").click(function () {
+            $(".info-user-wrap").toggle();
+            $(this).addClass("btn-light")
+        })
+    }
 
 
 

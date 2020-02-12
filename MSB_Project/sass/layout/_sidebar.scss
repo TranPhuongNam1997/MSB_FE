@@ -6,6 +6,9 @@
   background: #fff;
   border-radius: 11px;
   overflow: hidden;
+  @media (max-width: 1320px) {
+    margin-bottom: 15px;
+  }
 }
 .txt-heading{
   font-weight: bold;
@@ -17,6 +20,9 @@
   padding: 16px 31px;
   @include lessdesktop{
     padding: 16px 18px;
+  }
+  @include mobile-horizontal{
+    padding: 16px 9px;
   }
 }
 .tab-content{
@@ -35,6 +41,7 @@
       color: $c-59;
       text-align: center;
       margin-left: 5px;
+
       &:hover{
         background: #45AA1B;
         color: $c-wh;
@@ -42,11 +49,15 @@
       @include lessdesktop{
         width: 62px;
       }
+      @media (max-width: 1320px) {
+        width: 91px;
+      }
     }
     .nav-link.active{
       color: $c-wh;
       background:  #45AA1B;
       border-color: transparent;
+
     }
   }
 }
@@ -55,16 +66,41 @@
   @include lessdesktop{
     padding: 1px 18px 25px;
   }
+  @media (max-width: 1320px) {
+    padding: 1px 9px 25px;
+  }
+  @include mobile-horizontal{
+    padding: 1px 0 25px;
+  }
 }
 .enter-command{
   padding: 12px 20px 6px;
   border: 1px solid #EAEAEA;
   border-radius: 4px;
   margin-bottom: 17px;
+  @media (max-width: 1320px) {
+    border: none;
+    padding: 12px 2px 6px;
+    margin-bottom: 0;
+    &:after{
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+  @include mobile-horizontal{
+    margin: 0 9px;
+    border: 1px solid #eaeaea;
+    padding-bottom: 0;
+    margin-bottom: 17px;
+  }
 }
 .txt-enter-command{
   font-weight: 700;
   margin-bottom: 16px;
+  @media (max-width: 1320px) {
+    padding-left: 9px;
+  }
 }
 .interest-price{
   margin: 0 5px 8px;
@@ -74,12 +110,29 @@
   @include lessdesktop{
     display: block;
   }
+  @include mobile-horizontal{
+    display: flex;
+  }
+
   .lbl-main-left{
     width: calc(100% - 130px);
     @include lessdesktop{
       width: 100%;
       margin-bottom: 10px;
     }
+    @include mobile-horizontal{
+      width: 190px;
+
+    }
+  }
+  @media (max-width: 1320px) {
+    margin: 0;
+    padding: 0 9px;
+    width: 50%;
+    float: left;
+  }
+  @include mobile-horizontal{
+    width: 100%;
   }
 
 }
@@ -89,6 +142,9 @@
   @include lessdesktop{
     width: 100%;
     margin-bottom: 15px;
+  }
+  @include mobile-horizontal{
+    width: calc(100% - 190px);
   }
   input{
     height: 31px;
@@ -134,6 +190,9 @@
   @include lessdesktop{
     padding: 20px 18px;
   }
+  @include mobile-horizontal{
+    padding: 20px 9px;
+  }
 }
 .number-money{
   font-size: 16px;
@@ -144,3 +203,31 @@
   margin-bottom: 3px;
 }
 
+.plus-money{
+  @include mobile-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+}
+
+
+@media (max-width: 1320px) {
+  .sidebar-top .data-filed{
+    width: 50%;
+    padding: 0 9px;
+    float: left;
+  }
+}
+@include mobile-horizontal{
+  .sidebar-top .data-filed{
+    width: 100%;
+  }
+  .sidebar-bottom .dp-flex-between{
+    display: block;
+  }
+  .sidebar .data-filed input, .sidebar .data-filed select{
+    margin-bottom: 13px;
+  }
+}

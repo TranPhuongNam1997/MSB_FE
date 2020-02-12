@@ -167,6 +167,9 @@ header{
       color: #7f7f7f;
       font-size: 12px;
     }
+    .txt-name-user {
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -175,6 +178,10 @@ header{
   opacity: 1;
   transform: translateY(0);
   animation: cubic-block 0.3s forwards;
+  @include tablet{
+    animation: none;
+  }
+
 }
 .info-user-wrap{
   position: absolute;
@@ -185,7 +192,22 @@ header{
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-
+  @include tablet{
+    opacity: 1;
+    visibility: visible;
+    animation: none;
+  }
+  @include mobile-horizontal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    animation: unset;
+    top: 39px;
+    bottom: 0;
+    padding: 24px 9px 0;
+    height: 100%;
+  }
 
   .info-user-block{
     width: 486px;
@@ -198,6 +220,11 @@ header{
       padding: 17px 18px 30px 18px;
       width: 362px;
     }
+    @include mobile-horizontal{
+      border-radius: 10px;
+      width: 100%;
+      height: calc(100vh - 71px);
+    }
     &:before{
       content: '';
       position: absolute;
@@ -206,6 +233,9 @@ header{
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
       border-bottom: 7px solid #fff;
+      @include mobile-horizontal{
+        right: 10px;
+      }
     }
     .avt-detail{
       display: block;
@@ -218,6 +248,7 @@ header{
         width: 114px;
         height: 114px;
         margin-bottom: 16px;
+
       }
       img{
         @include resize-img;

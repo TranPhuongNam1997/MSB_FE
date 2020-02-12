@@ -57,6 +57,13 @@ input[type="checkbox"]:checked:after{
   @include lessdesktop{
     padding: 11px 15px;
   }
+  @media (max-width: 1320px) {
+    padding: 11px 42px;
+  }
+  @include mobile-horizontal{
+    width: 100%;
+    padding: 12px 15px;
+  }
   &:hover{
     background: #539c35;
     transition: all 0.3s;
@@ -74,6 +81,9 @@ input[type="checkbox"]:checked:after{
   margin-bottom: 15px;
   @include lessdesktop{
     padding: 15px 73px;
+  }
+  @include mobile-horizontal{
+    width: 100%;
   }
   &:hover{
     background: #ffc7a4;
@@ -98,5 +108,10 @@ input[type="checkbox"]:checked:after{
   border-radius: 2px;
   &:hover{
     background: #cbffb4;
+  }
+}
+@include mobile-horizontal{
+  .item-search .data-filed  input, .item-search .data-filed select{
+    margin-bottom: 15px;
   }
 }

@@ -57,6 +57,7 @@
 }
 .data-filed{
   position: relative;
+
   input,select{
     height: 50px;
     font-size: 14px;
@@ -157,6 +158,9 @@
   @include lessdesktop{
     padding: 21px 18px 6px;
   }
+  @include mobile-horizontal{
+    padding: 21px 9px 6px;
+  }
   .title-search{
     font-weight: 700;
     font-size: 18px;
@@ -173,6 +177,9 @@
   @include lessdesktop{
     width: 210px;
   }
+  @include mobile-horizontal{
+    width: 100%;
+  }
 }
 .table-wrap {
   padding-bottom: 20px;
@@ -184,6 +191,8 @@
   .table-block{
     table{
       width: 100%;
+      word-wrap: break-word;
+      table-layout: fixed;
       thead{
         tr{
           background: #F5F5F6;
@@ -199,6 +208,9 @@
             &.w-225{
               width: 225px;
             }
+            @include mobile-horizontal{
+              padding: 15px 9px;
+            }
           }
         }
       }
@@ -210,6 +222,9 @@
             border: 1px solid #EAEAEA;
             @include lessdesktop{
               padding: 15px 18px;
+            }
+            @include mobile-horizontal{
+              padding: 15px 9px;
             }
           }
         }

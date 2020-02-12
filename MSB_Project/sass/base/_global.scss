@@ -126,6 +126,9 @@ input[name="daterange"]{
   @include lessdesktop{
     padding: 118px 18px 41px;
   }
+  @include mobile-horizontal{
+    padding: 70px 9px 41px;
+  }
 
 }
 input[disabled="disabled"]{
@@ -149,4 +152,18 @@ input[disabled="disabled"]{
   opacity: 0.5;
   z-index: 1;
   cursor: pointer;
+}
+.btn-light{
+  background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%);
+}
+.user-block.btn-light .name-user{
+  color: #fff;
+}
+.user-block.btn-light  .name-user .id-user{
+  color: #fff;
+}
+@include mobile-horizontal{
+  .hidden-mb{
+    display: none;
+  }
 }

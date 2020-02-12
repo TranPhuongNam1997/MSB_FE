@@ -12,10 +12,10 @@
   left: 50%;
   transform: translate(-50%,-50%);
   @include tablet{
-    width: 374px;
+    width: 600px;
   }
-  @include mobile{
-    width: 320px;
+  @include mobile-horizontal{
+    width: 100%;
   }
 }
 .row-login{
@@ -79,6 +79,11 @@
   flex: 0 0 22%;
   max-width: 22%;
   position: relative;
+  @media (max-width: 1320px) {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 .col-msb-78{
   padding: 0 9px;
@@ -86,4 +91,9 @@
   flex: 0 0 78%;
   max-width: 78%;
   position: relative;
+  @media (max-width: 1320px) {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
