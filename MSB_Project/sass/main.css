@@ -206,6 +206,12 @@ input[disabled="disabled"] {
 .status-cancelled {
   color: #DA2128; }
 
+.overlay {
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  cursor: pointer; }
+
 .container-login {
   max-width: 1230px;
   padding: 0 15px;
@@ -302,6 +308,12 @@ header {
   @media only screen and (max-width: 1600px) {
     .head-msb {
       padding: 0 25px; } }
+  @media only screen and (max-width: 767px) {
+    .head-msb {
+      padding: 0 9px; } }
+  @media only screen and (max-width: 767px) {
+    .head-msb .head-left {
+      position: relative; } }
   .head-msb .head-left .menu-private {
     float: left;
     margin-top: 35px;
@@ -310,24 +322,45 @@ header {
       .head-msb .head-left .menu-private {
         margin-top: 24px;
         margin-bottom: 26px; } }
+    @media only screen and (max-width: 767px) {
+      .head-msb .head-left .menu-private {
+        margin-top: 12px;
+        margin-bottom: 12px; } }
     .head-msb .head-left .menu-private button {
       background: transparent;
       border: none;
-      padding: 0; }
+      padding: 0;
+      outline: none; }
   .head-msb .head-left .logo-msb {
     float: left;
     margin: 19px 73px 23px 34px; }
+    @media (min-width: 1200px) and (max-width: 1236px) {
+      .head-msb .head-left .logo-msb {
+        margin: 19px 35px 23px 34px; } }
+    @media (min-width: 992px) and (max-width: 1080px) {
+      .head-msb .head-left .logo-msb {
+        margin: 19px 13px 23px !important; } }
     @media only screen and (max-width: 1199px) {
       .head-msb .head-left .logo-msb {
         margin: 19px 19px 23px; } }
     @media (max-width: 991px) {
       .head-msb .head-left .logo-msb {
         margin: 8px 19px 17px; } }
+    @media only screen and (max-width: 767px) {
+      .head-msb .head-left .logo-msb {
+        margin: 1px 19px 8px;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -4px; } }
     .head-msb .head-left .logo-msb h1 {
       margin-bottom: 0; }
       .head-msb .head-left .logo-msb h1 a img {
         height: 43px; }
         @media (max-width: 991px) {
+          .head-msb .head-left .logo-msb h1 a img {
+            height: 30px; } }
+        @media (min-width: 992px) and (max-width: 1080px) {
           .head-msb .head-left .logo-msb h1 a img {
             height: 30px; } }
 
@@ -340,6 +373,11 @@ header {
   text-align: center;
   line-height: 46px;
   transition: all 0.3s; }
+  @media only screen and (max-width: 767px) {
+    .notification {
+      width: 32px;
+      height: 32px;
+      line-height: 28px; } }
   .notification img:first-child {
     display: inline-block; }
   .notification img:last-child {
@@ -361,9 +399,21 @@ header {
   margin-left: 10px;
   cursor: pointer;
   transition: all 0.2s; }
+  @media (min-width: 992px) and (max-width: 1080px) {
+    .user-block {
+      margin-left: 0;
+      padding-right: 26px; } }
+  @media only screen and (max-width: 767px) {
+    .user-block {
+      margin-left: 3px;
+      padding: 0;
+      border: none; } }
   .user-block:hover {
     transition: all 0.2s;
     background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%); }
+    @media only screen and (max-width: 767px) {
+      .user-block:hover {
+        background: none; } }
     .user-block:hover .name-user {
       color: #fff; }
       .user-block:hover .name-user .id-user {
@@ -376,8 +426,14 @@ header {
     background: #f9f9f9;
     border-radius: 50%;
     margin-right: 19px; }
+    @media only screen and (max-width: 767px) {
+      .user-block .avatar-user {
+        margin-right: 0; } }
   .user-block .name-user {
     font-size: 16px; }
+    @media only screen and (max-width: 767px) {
+      .user-block .name-user {
+        display: none; } }
     .user-block .name-user .id-user {
       color: #7f7f7f;
       font-size: 12px; }
@@ -503,12 +559,57 @@ header {
     color: #DA2128;
     text-decoration: underline; }
 
+.line-main {
+  background: #000;
+  width: 23px;
+  height: 4px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 5px;
+  pointer-events: none;
+  transition: all 0.3s; }
+  .line-main:last-child {
+    margin-bottom: 0; }
+
+.change-icon-mb .line-1 {
+  transform: translateY(9px) translateX(0) rotate(45deg);
+  transition: all 0.3s; }
+.change-icon-mb .line-2 {
+  opacity: 0;
+  transition: all 0.3s; }
+.change-icon-mb .line-3 {
+  transform: translateY(-9px) translateX(0) rotate(-46deg);
+  transition: all 0.3s; }
+
 .navigation {
   float: left; }
+  @media (max-width: 991px) {
+    .navigation {
+      display: block;
+      position: fixed;
+      top: 75px;
+      left: 0;
+      height: calc(100vh - 75px);
+      background: #fff;
+      width: 361px;
+      padding: 0 30px;
+      border-top: 1px solid #eaeaea;
+      transform: translateX(-100%);
+      transition: all 0.3s; } }
+  @media only screen and (max-width: 767px) {
+    .navigation {
+      top: 49px;
+      padding: 0 9px;
+      height: calc(100vh - 49px); } }
+  @media only screen and (max-width: 576px) {
+    .navigation {
+      width: 100%; } }
 
-@media (max-width: 991px) {
-  .navigation {
-    display: none; } }
+.navigation.open-mb {
+  display: block;
+  transform: translateX(0);
+  transition: all 0.3s; }
+
 .menu li {
   float: left;
   margin: 0 18px;
@@ -516,10 +617,20 @@ header {
   @media only screen and (max-width: 1199px) {
     .menu li {
       margin: 0 9px; } }
+  @media (max-width: 991px) {
+    .menu li {
+      display: block;
+      float: unset;
+      border-bottom: 1px solid #EAEAEA;
+      margin: 0; } }
   .menu li.active a {
     color: #D35416; }
-  .menu li.active:after {
+  .menu li.active a:after {
     transform: translateX(-50%) scaleX(1); }
+    @media (max-width: 991px) {
+      .menu li.active a:after {
+        transform: scale(1);
+        width: 100%; } }
   .menu li a {
     display: block;
     padding: 38px 0 39px;
@@ -527,6 +638,9 @@ header {
     font-weight: 700;
     transition: all 0.3s;
     position: relative; }
+    @media (max-width: 991px) {
+      .menu li a {
+        padding: 17px 0; } }
     .menu li a:hover {
       color: #D35416;
       transition: all 0.3s; }
@@ -543,9 +657,19 @@ header {
       pointer-events: none;
       border-radius: 30px;
       transition: all 0.3s; }
+      @media (max-width: 991px) {
+        .menu li a:after {
+          left: 0;
+          transform: scale(1);
+          width: 0;
+          height: 1px; } }
     .menu li a:hover:after {
       transform: translateX(-50%) scaleX(1);
       transition: all 0.3s; }
+      @media (max-width: 991px) {
+        .menu li a:hover:after {
+          transform: scale(1);
+          width: 100%; } }
 
 .sidebar {
   background: #fff;

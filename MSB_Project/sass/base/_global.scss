@@ -142,3 +142,11 @@ input[disabled="disabled"]{
 .status-cancelled{
   color: #DA2128;
 }
+
+
+.overlay{
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  cursor: pointer;
+}

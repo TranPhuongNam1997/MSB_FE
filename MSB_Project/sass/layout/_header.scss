@@ -7,15 +7,21 @@ header{
   box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.102);
   position: fixed;
   width: 100%;
-
 }
 .head-msb{
   padding: 0 30px 0 39px;
+
   @include lessdesktop{
     padding: 0 25px;
   }
+  @include mobile-horizontal{
+    padding: 0 9px;
+  }
 
   .head-left{
+    @include mobile-horizontal{
+      position: relative;
+    }
     .menu-private{
       float: left;
       margin-top: 35px;
@@ -24,21 +30,39 @@ header{
         margin-top: 24px;
         margin-bottom: 26px;
       }
+      @include mobile-horizontal{
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
       button{
         background: transparent;
         border: none;
         padding: 0;
+        outline: none;
       }
 
     }
     .logo-msb{
       float: left;
       margin: 19px 73px 23px 34px;
+      @media (min-width: 1200px) and (max-width: 1236px) {
+        margin: 19px 35px 23px 34px;
+      }
+      @media (min-width: 992px) and (max-width: 1080px) {
+        margin: 19px 13px 23px!important;
+      }
       @include tablet-horizontal{
         margin: 19px 19px 23px;
       }
       @include tablet{
         margin: 8px 19px 17px;
+      }
+      @include mobile-horizontal{
+        margin: 1px 19px 8px;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -4px;
       }
       h1{
         margin-bottom: 0;
@@ -46,6 +70,9 @@ header{
           img{
             height: 43px;
             @include tablet{
+              height: 30px;
+            }
+            @media (min-width: 992px) and (max-width: 1080px) {
               height: 30px;
             }
           }
@@ -64,6 +91,11 @@ header{
   text-align: center;
   line-height: 46px;
   transition: all 0.3s;
+  @include mobile-horizontal{
+    width: 32px;
+    height: 32px;
+    line-height: 28px;
+  }
   img:first-child{
     display: inline-block;
   }
@@ -90,9 +122,23 @@ header{
   margin-left: 10px;
   cursor: pointer;
   transition: all 0.2s;
+  @media (min-width: 992px) and (max-width: 1080px) {
+    margin-left: 0;
+    padding-right: 26px;
+  }
+  @include mobile-horizontal{
+    margin-left: 3px;
+    padding: 0;
+    border: none;
+
+  }
   &:hover{
     transition: all 0.2s;
     background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%);
+    @include mobile-horizontal{
+      background: none;
+      //border: 1px solid #DA2128;
+    }
     .name-user{
       color: $c-wh;
       .id-user{
@@ -108,9 +154,15 @@ header{
     background: #f9f9f9;
     border-radius: 50%;
     margin-right: 19px;
+    @include mobile-horizontal{
+      margin-right: 0;
+    }
   }
   .name-user{
     font-size: 16px;
+    @include mobile-horizontal{
+      display: none;
+    }
     .id-user{
       color: #7f7f7f;
       font-size: 12px;
@@ -244,5 +296,35 @@ header{
   &:hover{
     color: #DA2128;
     text-decoration: underline;
+  }
+}
+
+
+//css line
+.line-main{
+  background: #000;
+  width: 23px;
+  height: 4px;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 5px;
+  pointer-events: none;
+  transition: all 0.3s;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.change-icon-mb{
+  .line-1{
+    transform: translateY(9px) translateX(0) rotate(45deg);
+    transition: all 0.3s;
+  }
+  .line-2{
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .line-3{
+    transform: translateY(-9px) translateX(0) rotate(-46deg);
+    transition: all 0.3s;
   }
 }
