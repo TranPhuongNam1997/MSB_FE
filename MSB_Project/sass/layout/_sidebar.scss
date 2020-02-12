@@ -36,6 +36,9 @@
         background: #45AA1B;
         color: $c-wh;
       }
+      @include lessdesktop{
+        width: 62px;
+      }
     }
     .nav-link.active{
       color: $c-wh;
@@ -62,14 +65,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include lessdesktop{
+    display: block;
+  }
   .lbl-main-left{
     width: calc(100% - 130px);
+    @include lessdesktop{
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 
 }
 .ip-50{
   width: 130px;
   height: 31px;
+  @include lessdesktop{
+    width: 100%;
+    margin-bottom: 15px;
+  }
   input{
     height: 31px;
     width: 100%;
@@ -92,7 +106,7 @@
 .lbl-txt-main{
   display: inline-block;
   color: #595959;
-  font-size: 12px;
+  font-size: 13px;
   min-width: 48px;
   margin-right: 14px;
 }
@@ -109,7 +123,7 @@
 
 .sidebar-bottom{
   background: #F9FFF9;
-  padding: 20px 19px;
+  padding: 20px 29px;
   border-top: 1px dashed #EAEAEA;
 }
 .number-money{

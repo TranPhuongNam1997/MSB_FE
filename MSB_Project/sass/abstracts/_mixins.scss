@@ -6,13 +6,18 @@
     @content
   }
 }
+@mixin lessdesktop{
+  @media only screen and (max-width: 1600px) {
+    @content
+  }
+}
 @mixin tablet-horizontal{
   @media only screen and (max-width: 1199px) {
     @content
   }
 }
 @mixin tablet{
-  @media only screen and (max-width: 991px) {
+  @media(max-width: 991px) {
     @content
   }
 }

@@ -123,6 +123,9 @@ input[name="daterange"]{
   min-height: 100vh;
   padding: 41px 38px;
   padding-top: 132px;
+  @include lessdesktop{
+    padding: 118px 25px 41px;
+  }
 
 }
 input[disabled="disabled"]{

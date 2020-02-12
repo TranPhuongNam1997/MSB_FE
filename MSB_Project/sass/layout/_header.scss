@@ -7,14 +7,23 @@ header{
   box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.102);
   position: fixed;
   width: 100%;
+
 }
 .head-msb{
   padding: 0 30px 0 39px;
+  @include lessdesktop{
+    padding: 0 25px;
+  }
+
   .head-left{
     .menu-private{
       float: left;
       margin-top: 35px;
       margin-bottom: 33px;
+      @include tablet{
+        margin-top: 24px;
+        margin-bottom: 26px;
+      }
       button{
         background: transparent;
         border: none;
@@ -25,11 +34,20 @@ header{
     .logo-msb{
       float: left;
       margin: 19px 73px 23px 34px;
+      @include tablet-horizontal{
+        margin: 19px 19px 23px;
+      }
+      @include tablet{
+        margin: 8px 19px 17px;
+      }
       h1{
         margin-bottom: 0;
         a{
           img{
             height: 43px;
+            @include tablet{
+              height: 30px;
+            }
           }
         }
       }
@@ -46,9 +64,21 @@ header{
   text-align: center;
   line-height: 46px;
   transition: all 0.3s;
+  img:first-child{
+    display: inline-block;
+  }
+  img:last-child{
+    display: none;
+  }
   &:hover{
     background: #E33C26;
     transition: all 0.3s;
+    img:first-child{
+      display: none;
+    }
+    img:last-child{
+      display: inline-block;
+    }
   }
 }
 .user-block{
@@ -85,5 +115,134 @@ header{
       color: #7f7f7f;
       font-size: 12px;
     }
+  }
+}
+
+.user-block:hover .info-user-wrap{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  animation: cubic-block 0.3s forwards;
+}
+.info-user-wrap{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: 24px;
+  cursor: default;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+
+  .info-user-block{
+    width: 486px;
+    padding: 44px 54px 70px 54px;
+    background: #fff;
+    position: relative;
+    border-radius: 26px;
+    box-shadow: 7px 7px 20px #cbcbcb;
+    @include lessdesktop{
+      padding: 17px 18px 30px 18px;
+      width: 362px;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: -7px;
+      right: 40px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #fff;
+    }
+    .avt-detail{
+      display: block;
+      width: 198px;
+      height: 198px;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 78px;
+      @include lessdesktop{
+        width: 114px;
+        height: 114px;
+        margin-bottom: 16px;
+      }
+      img{
+        @include resize-img;
+      }
+      &:before{
+        @include resize-before(100%);
+      }
+      .name-user-detail{
+        display: block;
+        width: 261px;
+        color: #fff;
+        font-size: 23px;
+        font-weight: 700;
+        background: radial-gradient(102.91% 383.02% at 2.97% -24.08%, #DA2128 35.6%, #F37021 100%);
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        padding: 24px 0;
+        text-align: center;
+        border-radius: 59px;
+        @include lessdesktop{
+          padding: 15px 27px;
+          width: auto;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.info-user-detail{
+  border-bottom: 1px solid #EAEAEA;
+  padding: 20px 0;
+  &:first-child{
+    border-top: 1px solid #EAEAEA;
+  }
+}
+.title-user-left{
+  font-size: 13px;
+}
+.info-user-right{
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.user-detail-block{
+  margin-bottom: 72px;
+  @include lessdesktop{
+    margin-bottom: 21px;
+  }
+}
+.btn-logout {
+  padding: 24px 0;
+  border: none;
+  background: #EAEAEA;
+  color: #636363;
+  font-weight: 700;
+  border-radius: 50px;
+  text-align: center;
+  width: 261px;
+  display: block;
+  margin: 0 auto 21px auto;
+  font-size: 17px;
+  @include lessdesktop{
+    padding: 13px 44px;
+    width: auto;
+  }
+  &:hover{
+    color: #fff;
+    background: radial-gradient(102.91% 383.02% at 2.97% -24.08%, #DA2128 35.6%, #F37021 100%);  }
+}
+
+
+.change-password {
+  font-weight: 700;
+  color: #D35416;
+  text-align: center;
+  &:hover{
+    color: #DA2128;
+    text-decoration: underline;
   }
 }

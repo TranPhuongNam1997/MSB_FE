@@ -28,3 +28,17 @@
     transform: translateY(0);
   }
 }
+@-webkit-keyframes cubic-block{
+  0%{
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  70%{
+    -webkit-transform: translateY(7px);
+    transform: translateY(7px);
+  }
+  100%{
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}

@@ -165,6 +165,9 @@
   width: 273px;
   float: left;
   margin-right: 12px;
+  @include lessdesktop{
+    width: 241px;
+  }
 }
 .table-wrap {
   padding-bottom: 20px;
@@ -180,7 +183,7 @@
         tr{
           background: #F5F5F6;
           th{
-            font-size: 12px;
+            font-size: 13px;
             color: $c-59;
             border: 1px solid #EAEAEA;
             padding: 15px 30px;
