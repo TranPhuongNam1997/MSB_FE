@@ -58,7 +58,7 @@
 .data-filed{
   position: relative;
 
-  input,select{
+  input,select,textarea{
     height: 50px;
     font-size: 14px;
     color: $c-black;
@@ -68,6 +68,7 @@
     padding: 15px 18px;
     margin-bottom: 15px;
     outline-color: #F37021;
+    font-weight: 500;
     @include mobile-horizontal{
       margin-bottom: 10px;
     }
@@ -82,6 +83,10 @@
       @extend %label-movement;
     }
   }
+  textarea{
+    background: $c-wh;
+    height: 86px;
+  }
   input{
     background: $c-wh;
   }
@@ -90,9 +95,9 @@
   }
   label.lbl-field{
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 14px;
-    color: #2C485B;
+    color: #595959;
     transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
     pointer-events: none;
     padding: 0 5px;
@@ -151,6 +156,11 @@
 }
 .heading-search-block{
   margin-bottom: 34px;
+  @include mobile-horizontal{
+    .view-right{
+      display: none;
+    }
+  }
 }
 .head-search{
   padding: 21px 27px 6px;
@@ -207,6 +217,9 @@
             }
             &.w-225{
               width: 225px;
+              @include mobile{
+                width: auto;
+              }
             }
             @include mobile-horizontal{
               padding: 15px 9px;
@@ -225,6 +238,14 @@
             }
             @include mobile-horizontal{
               padding: 15px 9px;
+            }
+            @include mobile{
+              .col-12:first-child{
+                margin-bottom: 10px;
+              }
+              .col-12{
+                text-align: center;
+              }
             }
           }
         }
@@ -247,6 +268,7 @@
 .view-info{
   position: relative;
   display: block;
+  color: #000;
   .icon-info{
     position: absolute;
     top: 50%;

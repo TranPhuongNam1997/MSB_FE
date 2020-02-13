@@ -12,7 +12,7 @@ header{
   padding: 0 30px 0 39px;
 
   @include lessdesktop{
-    padding: 0 25px;
+    padding: 0 18px;
   }
   @include mobile-horizontal{
     padding: 0 9px;
@@ -135,7 +135,7 @@ header{
   &:hover{
     transition: all 0.2s;
     background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%);
-    @include mobile-horizontal{
+    @include tablet{
       background: none;
       //border: 1px solid #DA2128;
     }
@@ -143,6 +143,12 @@ header{
       color: $c-wh;
       .id-user{
         color: $c-wh;
+        @include tablet{
+          color: #7f7f7f;
+        }
+      }
+      @include tablet{
+        color: #000;
       }
     }
   }

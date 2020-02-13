@@ -88,7 +88,7 @@ $( document ).ready(function() {
         $(".info-user-wrap").hide();
         $(".user-block").click(function () {
             $(".info-user-wrap").toggle();
-            $(this).addClass("btn-light")
+            $(this).toggleClass("btn-lightx")
         })
     }
 

@@ -193,7 +193,7 @@ input[name="daterange"] {
       padding: 118px 18px 41px; } }
   @media only screen and (max-width: 767px) {
     .main-wrap {
-      padding: 70px 9px 41px; } }
+      padding: 70px 9px 6px; } }
 
 input[disabled="disabled"] {
   background: #F4F4F4;
@@ -215,13 +215,29 @@ input[disabled="disabled"] {
   z-index: 1;
   cursor: pointer; }
 
-.btn-light {
-  background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%); }
+.user-block.btn-lightx {
+  background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%) !important; }
 
-.user-block.btn-light .name-user {
+@media only screen and (max-width: 767px) {
+  .user-block.btn-lightx {
+    position: relative;
+    background: transparent !important; }
+    .user-block.btn-lightx:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border: 2px solid #EF6222;
+      border-radius: 50%; } }
+.user-block.btn-lightx .name-user {
   color: #fff; }
 
-.user-block.btn-light .name-user .id-user {
+.user-block.btn-lightx .txt-name-user, .user-block.btn-lightx .name-user .id-user {
+  color: #fff !important; }
+
+.user-block.btn-lightx .name-user .id-user {
   color: #fff; }
 
 @media only screen and (max-width: 767px) {
@@ -332,7 +348,7 @@ header {
   padding: 0 30px 0 39px; }
   @media only screen and (max-width: 1600px) {
     .head-msb {
-      padding: 0 25px; } }
+      padding: 0 18px; } }
   @media only screen and (max-width: 767px) {
     .head-msb {
       padding: 0 9px; } }
@@ -436,13 +452,19 @@ header {
   .user-block:hover {
     transition: all 0.2s;
     background: radial-gradient(122.58% 519.4% at 2.45% 8.6%, #DA2128 35.6%, #F37021 100%); }
-    @media only screen and (max-width: 767px) {
+    @media (max-width: 991px) {
       .user-block:hover {
         background: none; } }
     .user-block:hover .name-user {
       color: #fff; }
       .user-block:hover .name-user .id-user {
         color: #fff; }
+        @media (max-width: 991px) {
+          .user-block:hover .name-user .id-user {
+            color: #7f7f7f; } }
+      @media (max-width: 991px) {
+        .user-block:hover .name-user {
+          color: #000; } }
   .user-block .avatar-user {
     height: 35px;
     width: 35px;
@@ -751,6 +773,10 @@ header {
   border-bottom: 0; }
   .nav-tabs .nav-item {
     display: inline-block; }
+    .nav-tabs .nav-item:last-child .nav-link:hover {
+      background: #DA2128; }
+    .nav-tabs .nav-item:last-child .nav-link.active {
+      background: #DA2128; }
     .nav-tabs .nav-item .nav-link {
       display: block;
       width: 91px;
@@ -900,6 +926,8 @@ header {
   font-size: 16px;
   font-weight: 700;
   color: #45AA1B; }
+  .number-money.number-money-red {
+    color: #DA2128; }
 
 .txt-plus-money {
   margin-bottom: 3px; }
@@ -925,6 +953,16 @@ header {
 
   .sidebar .data-filed input, .sidebar .data-filed select {
     margin-bottom: 13px; } }
+.btn-process {
+  margin: 0 -5px; }
+  @media (max-width: 1320px) {
+    .btn-process {
+      margin: 0 4px; } }
+  .btn-process .col-6-5 {
+    width: 50%;
+    float: left;
+    padding: 0 5px; }
+
 .login-wrap {
   position: relative;
   height: 100%;
@@ -958,7 +996,7 @@ header {
     .txt-login {
       margin-bottom: 20px; } }
 
-.data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed input:valid ~ label.lbl-field, .data-filed select:valid ~ label.lbl-field {
+.data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed textarea:focus ~ label.lbl-field, .data-filed input:valid ~ label.lbl-field, .data-filed select:valid ~ label.lbl-field, .data-filed textarea:valid ~ label.lbl-field {
   font-size: 12px;
   color: #5F6775;
   top: -9px;
@@ -966,7 +1004,7 @@ header {
 
 .data-filed {
   position: relative; }
-  .data-filed input, .data-filed select {
+  .data-filed input, .data-filed select, .data-filed textarea {
     height: 50px;
     font-size: 14px;
     color: #1a1a1a;
@@ -975,21 +1013,25 @@ header {
     border: 1px solid #EAEAEA;
     padding: 15px 18px;
     margin-bottom: 15px;
-    outline-color: #F37021; }
+    outline-color: #F37021;
+    font-weight: 500; }
     @media only screen and (max-width: 767px) {
-      .data-filed input, .data-filed select {
+      .data-filed input, .data-filed select, .data-filed textarea {
         margin-bottom: 10px; } }
-    .data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field {
+    .data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed textarea:focus ~ label.lbl-field {
       color: #F37021; }
+  .data-filed textarea {
+    background: #fff;
+    height: 86px; }
   .data-filed input {
     background: #fff; }
   .data-filed select {
     cursor: pointer; }
   .data-filed label.lbl-field {
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 14px;
-    color: #2C485B;
+    color: #595959;
     transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
     pointer-events: none;
     padding: 0 5px;
@@ -1043,6 +1085,9 @@ header {
 
 .heading-search-block {
   margin-bottom: 34px; }
+  @media only screen and (max-width: 767px) {
+    .heading-search-block .view-right {
+      display: none; } }
 
 .head-search {
   padding: 21px 27px 6px;
@@ -1095,6 +1140,9 @@ header {
           padding: 15px 18px; } }
       .table-wrap .table-block table thead tr th.w-225 {
         width: 225px; }
+        @media only screen and (max-width: 576px) {
+          .table-wrap .table-block table thead tr th.w-225 {
+            width: auto; } }
       @media only screen and (max-width: 767px) {
         .table-wrap .table-block table thead tr th {
           padding: 15px 9px; } }
@@ -1109,6 +1157,11 @@ header {
       @media only screen and (max-width: 767px) {
         .table-wrap .table-block table tbody tr td {
           padding: 15px 9px; } }
+      @media only screen and (max-width: 576px) {
+        .table-wrap .table-block table tbody tr td .col-12:first-child {
+          margin-bottom: 10px; }
+        .table-wrap .table-block table tbody tr td .col-12 {
+          text-align: center; } }
 
 .caret-left {
   margin-right: 11px; }
@@ -1122,7 +1175,8 @@ header {
 
 .view-info {
   position: relative;
-  display: block; }
+  display: block;
+  color: #000; }
   .view-info .icon-info {
     position: absolute;
     top: 50%;
@@ -1229,8 +1283,12 @@ input[type="checkbox"]:checked:after {
       width: 100%;
       padding: 12px 15px; } }
   .btn-green:hover {
-    background: #539c35;
+    background: #47892c;
     transition: all 0.3s; }
+  .btn-green.btn-red {
+    background: #DA2128; }
+    .btn-green.btn-red:hover {
+      background: #b8252b; }
 
 .btn-search {
   height: 50px;
@@ -1258,7 +1316,8 @@ input[type="checkbox"]:checked:after {
   padding: 3px 25px;
   border-radius: 2px; }
   .sell-tb:hover {
-    background: #ffcdb0; }
+    background: #DA2128;
+    color: #fff; }
 
 .buy-tb {
   background: #E0FFD2;
@@ -1267,10 +1326,30 @@ input[type="checkbox"]:checked:after {
   padding: 3px 25px;
   border-radius: 2px; }
   .buy-tb:hover {
-    background: #cbffb4; }
+    background: #45AA1B;
+    color: #fff; }
 
 @media only screen and (max-width: 767px) {
   .item-search .data-filed input, .item-search .data-filed select {
     margin-bottom: 15px; } }
+.btn-main {
+  width: 100%;
+  border-radius: 4px;
+  height: 41px;
+  border: none;
+  color: #fff;
+  transition: all 0.3s; }
+
+.btn-cancel {
+  background: #999; }
+  .btn-cancel:hover {
+    background: #737373;
+    transition: all 0.3s; }
+
+.btn-confirm {
+  background: radial-gradient(202.33% 683.91% at -13.58% -34.51%, #DA2128 35.6%, #F37021 100%); }
+  .btn-confirm:hover {
+    background: radial-gradient(202.33% 683.91% at -13.58% -34.51%, #ff4a51 35.6%, #F37021 100%);
+    transition: all 0.3s; }
 
 /*# sourceMappingURL=main.css.map */

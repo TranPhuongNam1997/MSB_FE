@@ -65,8 +65,14 @@ input[type="checkbox"]:checked:after{
     padding: 12px 15px;
   }
   &:hover{
-    background: #539c35;
+    background: #47892c;
     transition: all 0.3s;
+  }
+  &.btn-red{
+    background: #DA2128;
+    &:hover{
+      background: #b8252b;
+    }
   }
 }
 
@@ -97,7 +103,8 @@ input[type="checkbox"]:checked:after{
   padding: 3px 25px;
   border-radius: 2px;
   &:hover{
-    background: #ffcdb0;
+    background: #DA2128;
+    color: $c-wh;
   }
 }
 .buy-tb{
@@ -107,11 +114,36 @@ input[type="checkbox"]:checked:after{
   padding: 3px 25px;
   border-radius: 2px;
   &:hover{
-    background: #cbffb4;
+    background: #45AA1B;
+    color: $c-wh;
   }
 }
 @include mobile-horizontal{
   .item-search .data-filed  input, .item-search .data-filed select{
     margin-bottom: 15px;
+  }
+}
+
+.btn-main{
+  width: 100%;
+  border-radius: 4px;
+  height: 41px;
+  border: none;
+  color: $c-wh;
+  transition: all 0.3s;
+}
+.btn-cancel{
+  background: #999;
+
+  &:hover{
+    background: #737373;
+    transition: all 0.3s;
+  }
+}
+.btn-confirm{
+  background: radial-gradient(202.33% 683.91% at -13.58% -34.51%, #DA2128 35.6%, #F37021 100%);
+  &:hover{
+    background: radial-gradient(202.33% 683.91% at -13.58% -34.51%, #ff4a51 35.6%, #F37021 100%);
+    transition: all 0.3s;
   }
 }

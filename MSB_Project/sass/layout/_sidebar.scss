@@ -32,6 +32,12 @@
   border-bottom: 0;
   .nav-item{
     display: inline-block;
+    &:last-child .nav-link:hover{
+      background: #DA2128;
+    }
+    &:last-child .nav-link.active{
+      background: #DA2128;
+    }
     .nav-link{
       display: block;
       width: 91px;
@@ -198,6 +204,9 @@
   font-size: 16px;
   font-weight: 700;
   color: #45AA1B;
+  &.number-money-red{
+    color: #DA2128;
+  }
 }
 .txt-plus-money{
   margin-bottom: 3px;
@@ -229,5 +238,22 @@
   }
   .sidebar .data-filed input, .sidebar .data-filed select{
     margin-bottom: 13px;
+  }
+}
+
+//css cam co
+
+//.sidebar-pledge{
+//  padding: 17px 33px 23px;
+//}
+.btn-process{
+  margin: 0 -5px;
+  @media (max-width: 1320px) {
+    margin: 0 4px;
+  }
+  .col-6-5{
+    width: 50%;
+    float: left;
+    padding: 0 5px;
   }
 }

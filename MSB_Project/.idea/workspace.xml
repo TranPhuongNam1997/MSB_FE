@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed6bd84-cf0b-4409-b6d7-5bf6034ff100" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pledge.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/css/daterangepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/libs/css/daterangepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/css/jquery.datetimepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/libs/css/jquery.datetimepicker.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/base/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/layout/_content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_content.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/layout/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_grid.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/layout/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css" afterDir="false" />
@@ -28,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
