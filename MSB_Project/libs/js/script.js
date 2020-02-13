@@ -92,6 +92,10 @@ $( document ).ready(function() {
         })
     }
 
+    $(".close-file").click(function () {
+        $(this).parent(".file-return").css("display","none");
+    })
+
 
 
 

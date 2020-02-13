@@ -214,119 +214,238 @@
         <div class="modal modal-msb" id="show-form-pledge">
             <div class="size-modal-big">
                 <div class="modal-content">
+                    <div class="btn-close" data-dismiss="modal"><img src="img/icon-close-mdl.svg" alt="ảnh"></div>
                     <form action="#">
                         <!-- Modal body -->
                         <div class="mdl-main">
                             <h2 class="heading-popup">Thông tin trái chủ</h2>
-                            <div class="item-zone-panel">
-                                <h3 class="head-panel">Tài khoản</h3>
-                                <div class="row-pc clearfix">
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <input type="text" disabled="disabled" required>
-                                            <label class="lbl-field">Số CIF</label>
+                            <div class="flow-auto">
+                                <div class="item-zone-panel">
+                                    <h3 class="head-panel">Tài khoản</h3>
+                                    <div class="row-pc clearfix">
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" disabled="disabled" required>
+                                                <label class="lbl-field">Số CIF</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <input type="text" disabled="disabled" required>
-                                            <label class="lbl-field">Khách hàng</label>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" disabled="disabled" required>
+                                                <label class="lbl-field">Khách hàng</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <select class="box-enter select-login" name="" required disabled="disabled">
-                                                <option value="" selected disabled hidden>Loại nhà đầu tư</option>
-                                                <option value="Cá nhân">Cá nhân</option>
-                                                <option value="Tổ chức">Tổ chức</option>
-                                            </select>
-                                            <label class="lbl-field">Loại nhà đầu tư</label>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <select class="box-enter select-login" name="" required disabled="disabled">
+                                                    <option value="" selected disabled hidden>Loại nhà đầu tư</option>
+                                                    <option value="Cá nhân">Cá nhân</option>
+                                                    <option value="Tổ chức">Tổ chức</option>
+                                                </select>
+                                                <label class="lbl-field">Loại nhà đầu tư</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <input type="text" disabled="disabled" required>
-                                            <label class="lbl-field">Khách hàng</label>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" disabled="disabled" required>
+                                                <label class="lbl-field">Khách hàng</label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <select class="box-enter select-login" name="" required>
-                                                <option value="" selected disabled hidden>Loại nhà đầu tư</option>
-                                                <option value="Cá nhân">Cá nhân</option>
-                                                <option value="Tổ chức">Tổ chức</option>
-                                            </select>
-                                            <label class="lbl-field">Loại nhà đầu tư</label>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <select class="box-enter select-login" name="" required>
+                                                    <option value="" selected disabled hidden>Loại nhà đầu tư</option>
+                                                    <option value="Cá nhân">Cá nhân</option>
+                                                    <option value="Tổ chức">Tổ chức</option>
+                                                </select>
+                                                <label class="lbl-field">Loại nhà đầu tư</label>
+                                            </div>
                                         </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <select class="box-enter select-login" name="" required>
+                                                    <option value="" selected disabled hidden>Loại nhà đầu tư</option>
+                                                    <option value="Cá nhân">Cá nhân</option>
+                                                    <option value="Tổ chức">Tổ chức</option>
+                                                </select>
+                                                <label class="lbl-field">Loại nhà đầu tư</label>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <select class="box-enter select-login" name="" required>
-                                                <option value="" selected disabled hidden>Loại nhà đầu tư</option>
-                                                <option value="Cá nhân">Cá nhân</option>
-                                                <option value="Tổ chức">Tổ chức</option>
-                                            </select>
-                                            <label class="lbl-field">Loại nhà đầu tư</label>
+                                </div>
+                                <div class="item-zone-panel">
+                                    <h3 class="head-panel">Thông tin tài khoản</h3>
+                                    <div class="row-pc clearfix">
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" required>
+                                                <label class="lbl-field">Số CIF</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" class="datepicker-msb-none" placeholder="__/__/____" name="" required>
+                                                <label class="lbl-field">Ngày giao dịch</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Nơi cấp</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" disabled="disabled" required>
+                                                <label class="lbl-field">Khách hàng</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <select class="box-enter select-login" name="" required>
+                                                    <option value="" selected disabled hidden>Loại nhà đầu tư</option>
+                                                    <option value="Cá nhân">Cá nhân</option>
+                                                    <option value="Tổ chức">Tổ chức</option>
+                                                </select>
+                                                <label class="lbl-field">Loại nhà đầu tư</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <select class="box-enter select-login" name="" required>
+                                                    <option value="" selected disabled hidden>Loại nhà đầu tư</option>
+                                                    <option value="Cá nhân">Cá nhân</option>
+                                                    <option value="Tổ chức">Tổ chức</option>
+                                                </select>
+                                                <label class="lbl-field">Loại nhà đầu tư</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-pc-4">
+                                            <div class="choose-gender-block">
+                                                <div class="dp-flex-between">
+                                                    <div class="txt-gender">Giới tính</div>
+                                                    <div class="choose-gender">
+                                                        <form action="#">
+                                                            <div class="item-gender clearfix">
+                                                                <input type="radio" id="male" name="gender" value="male" >
+                                                                <label for="male">Nam</label>
+                                                            </div>
+                                                            <div class="item-gender clearfix">
+                                                                <input type="radio" id="female" name="gender" value="female" checked>
+                                                                <label for="female">Nữ</label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Quốc tịch</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" class="datepicker-msb-none" placeholder="__/__/____" name="" required>
+                                                <label class="lbl-field">Nơi cấp</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <textarea name="" ></textarea>
+                                                <label class="lbl-field">Địa chỉ thường trú</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <textarea name="" ></textarea>
+                                                <label class="lbl-field">Địa chỉ liên lạc</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <textarea name="" ></textarea>
+                                                <label class="lbl-field">Địa chỉ người nhận</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Phone</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Fax</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="data-filed">
+                                                <input type="text" name="" required>
+                                                <label class="lbl-field">Mã chi nhánh</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-pc-4">
+                                            <div class="get-noti">
+                                                <input type="checkbox" id="cb-get-sms">
+                                                <label for="cb-get-sms">Nhận thông báo từ SMS</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-pc-4">
+                                            <div class="get-noti">
+                                                <input type="checkbox" id="cb-get-email">
+                                                <label for="cb-get-email">Nhận thông báo từ Email</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="attacked-info">
+                                    <div class="head-profile">Hồ sơ đính kèm</div>
+                                    <div class="file-profile clearfix">
+                                        <div class="input-file-container pull-left">
+                                            <input class="input-file" type="file">
+                                            <label tabindex="0" class="input-file-trigger">
+                                        <span class="ip-left">
+                                            <img src="img/icon-uploadfile.svg" alt="">
+                                            <span>Upload file</span>
+                                        </span>
+                                            </label>
+                                        </div>
+                                        <div class="item-profile-block pull-left">
+                                            <div class="file-return">hosochungminhthumattruoc.jpg<a href="javascript:0;" class="close-file"><i class="fa fa-close"></i></a></div>
+                                            <div class="file-return">hosochungminhthumattruoc.jpg<a href="javascript:0;" class="close-file"><i class="fa fa-close"></i></a></div>
+                                            <div class="file-return">hosochungminhthumattruoc.jpg<a href="javascript:0;" class="close-file"><i class="fa fa-close"></i></a></div>
+                                            <div class="file-return">hosochungminhthumattruoc.jpg<a href="javascript:0;" class="close-file"><i class="fa fa-close"></i></a></div>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="item-zone-panel">
-                                <h3 class="head-panel">Tài khoản</h3>
-                                <div class="row-pc clearfix">
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <input type="text" required>
-                                            <label class="lbl-field">Số CIF</label>
-                                        </div>
-                                    </div>
-                                    <div class="item-search">
-                                        <div class="data-filed">
-                                            <input type="text" class="datepicker-msb-none" placeholder="__/__/____" name="" required>
-                                            <label class="lbl-field">Ngày giao dịch</label>
-                                        </div>
-                                    </div>
-                                    <div class="item-search">
-                                        <div class="data-filed">
-                                            <input type="text" name="" required>
-                                            <label class="lbl-field">Nơi cấp</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <input type="text" disabled="disabled" required>
-                                            <label class="lbl-field">Khách hàng</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <select class="box-enter select-login" name="" required>
-                                                <option value="" selected disabled hidden>Loại nhà đầu tư</option>
-                                                <option value="Cá nhân">Cá nhân</option>
-                                                <option value="Tổ chức">Tổ chức</option>
-                                            </select>
-                                            <label class="lbl-field">Loại nhà đầu tư</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-pc-4">
-                                        <div class="data-filed">
-                                            <select class="box-enter select-login" name="" required>
-                                                <option value="" selected disabled hidden>Loại nhà đầu tư</option>
-                                                <option value="Cá nhân">Cá nhân</option>
-                                                <option value="Tổ chức">Tổ chức</option>
-                                            </select>
-                                            <label class="lbl-field">Loại nhà đầu tư</label>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
                         </div>
                         <!-- Modal footer -->
                         <div class="mdl-footer">
-                            <button type="button" class="btn-light-blue" data-dismiss="modal">Đóng</button>
-                            <button type="submit" class="btn-blue">Xác nhận</button>
+                            <div class="btn-group-foot">
+                                <!-- <button type="button" class="btn-light-blue" data-dismiss="modal">Đóng</button>-->
+                                <button type="submit" class="btn-confirm-mdl">Xác nhận</button>
+                            </div>
+
                         </div>
 
                     </form>

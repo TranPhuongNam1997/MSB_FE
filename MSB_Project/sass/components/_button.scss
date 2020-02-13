@@ -45,6 +45,61 @@ input[type="checkbox"]:checked:after{
   background-color: #F37021;
   border-color: #F37021;
 }
+input[type="checkbox"]~label{
+  cursor: pointer;
+}
+//radio
+input[type="radio"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  padding: 7px 5px 8px 15px;
+  //background: #f7f7f7;
+  float: left;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+input[type="radio"]:checked:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 22px;
+  display: table;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top-width: 0px;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+input[type="radio"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #bbb;
+  -webkit-transition: 240ms;
+  transition: 240ms;
+  border-radius: 50%;
+  background: #fff;
+}
+input[type="radio"]:checked:after{
+  background-color: #F37021;
+  border-color: #F37021;
+}
+input[type="radio"]:checked{
+  background: #f7f7f7;
+}
+input[type="radio"]:checked ~ label{
+  background: #f7f7f7;
+}
+
 .btn-green{
   background: #45AA1B;
   font-weight: 700;
@@ -146,4 +201,24 @@ input[type="checkbox"]:checked:after{
     background: radial-gradient(202.33% 683.91% at -13.58% -34.51%, #ff4a51 35.6%, #F37021 100%);
     transition: all 0.3s;
   }
+}
+.btn-confirm-mdl{
+  background: #F37021;
+  text-transform: uppercase;
+  padding: 14px 111px;
+  border-radius: 4px;
+  color: $c-wh;
+  border: none;
+  transition: all 0.3s;
+  &:hover{
+    background: #ff6000;
+    transition: all 0.3s;
+  }
+}
+.btn-close{
+  position: absolute;
+  top: 29px;
+  right: 35px;
+  padding: 5px 7px;
+  cursor: pointer;
 }
