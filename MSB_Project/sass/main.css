@@ -243,6 +243,33 @@ input[disabled="disabled"] {
 @media only screen and (max-width: 767px) {
   .hidden-mb {
     display: none; } }
+.modal-msb {
+  -webkit-filter: blur(0px); }
+
+.size-modal-big {
+  max-width: 62%;
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.mdl-main {
+  padding: 41px 44px 17px; }
+
+.heading-popup {
+  font-size: 31px;
+  line-height: 36px;
+  margin-bottom: 23px; }
+
+.head-panel {
+  font-size: 20px;
+  margin-bottom: 24px; }
+
+.item-zone-panel {
+  margin-bottom: 19px; }
+
 .container-login {
   max-width: 1230px;
   padding: 0 15px;
@@ -336,6 +363,26 @@ input[disabled="disabled"] {
       -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       max-width: 100%; } }
+
+.col-msb-12 {
+  padding: 0 9px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative; }
+
+.row-pc {
+  margin: 0 -12px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.col-pc-4 {
+  padding: 0 9px;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%; }
 
 header {
   background: #fff;
@@ -1020,6 +1067,8 @@ header {
         margin-bottom: 10px; } }
     .data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed textarea:focus ~ label.lbl-field {
       color: #F37021; }
+  .data-filed input[disabled="disabled"], .data-filed select[disabled="disabled"] {
+    background: #F7F7F7; }
   .data-filed textarea {
     background: #fff;
     height: 86px; }
@@ -1185,6 +1234,9 @@ header {
     display: none; }
   .view-info:hover {
     color: #DA2128; }
+    .view-info:hover .chang-info {
+      background: #FCDBC7;
+      color: #DA2128; }
   .view-info:hover .icon-info {
     display: block; }
 
@@ -1195,6 +1247,15 @@ header {
   color: #595959; }
 .view-right:hover {
   text-decoration: underline; }
+
+.view-info.chang-info-column:hover .icon-info {
+  right: -15px; }
+
+.chang-info {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #F5F5F6;
+  color: #595959; }
 
 #back-to-top {
   position: fixed;

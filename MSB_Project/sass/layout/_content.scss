@@ -83,6 +83,9 @@
       @extend %label-movement;
     }
   }
+  input[disabled="disabled"],select[disabled="disabled"]{
+    background: #F7F7F7;
+  }
   textarea{
     background: $c-wh;
     height: 86px;
@@ -276,12 +279,18 @@
     right: 0;
     display: none;
   }
+  
   &:hover{
     color: #DA2128;
+    .chang-info{
+      background: #FCDBC7;
+      color: #DA2128;
+    }
   }
   &:hover .icon-info{
     display: block;
   }
+
 }
 .view-right{
   img{
@@ -294,4 +303,16 @@
   &:hover{
     text-decoration: underline;
   }
+}
+.view-info.chang-info-column{
+  &:hover .icon-info{
+    right: -15px;
+  }
+}
+.chang-info{
+  display: inline-block;
+  padding: 5px 12px;
+  background: #F5F5F6;
+  //color: #DA2128;
+  color: #595959;
 }
