@@ -194,6 +194,8 @@ input[name="daterange"] {
   @media only screen and (max-width: 767px) {
     .main-wrap {
       padding: 70px 9px 6px; } }
+  .main-wrap.cs-pd {
+    padding: 0 0 40px; }
 
 input[disabled="disabled"] {
   background: #F4F4F4;
@@ -254,12 +256,12 @@ input[disabled="disabled"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-  @media (max-width: 1600px) {
+  @media (max-width: 1700px) {
     .size-modal-big {
       max-width: 1200px; } }
 
 .mdl-main {
-  padding: 41px 44px 17px; }
+  padding: 41px 29px 17px; }
 
 .modal-content {
   margin: 50px 0; }
@@ -267,12 +269,13 @@ input[disabled="disabled"] {
 .heading-popup {
   font-size: 31px;
   line-height: 36px;
-  margin-bottom: 23px; }
+  margin-bottom: 23px;
+  padding-left: 11px; }
 
 .flow-auto {
   max-height: calc(100vh - 385px);
   overflow: auto;
-  padding-right: 15px;
+  padding: 0 15px;
   /* width */
   /* Track */
   /* Handle */
@@ -1076,11 +1079,12 @@ header {
     .txt-login {
       margin-bottom: 20px; } }
 
-.data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed textarea:focus ~ label.lbl-field, .data-filed input:valid ~ label.lbl-field, .data-filed select:valid ~ label.lbl-field, .data-filed textarea:valid ~ label.lbl-field {
+.data-filed input:focus ~ label.lbl-field, .data-filed select:focus ~ label.lbl-field, .data-filed textarea:focus ~ label.lbl-field, .data-filed input:valid ~ label.lbl-field, .data-filed select:valid ~ label.lbl-field, .data-filed textarea:valid ~ label.lbl-field, .data-filed input[disabled="disabled"] ~ label.lbl-field:focus ~ label.lbl-field, .data-filed select[disabled="disabled"] ~ label.lbl-field:focus ~ label.lbl-field, .data-filed input[disabled="disabled"] ~ label.lbl-field:valid ~ label.lbl-field, .data-filed select[disabled="disabled"] ~ label.lbl-field:valid ~ label.lbl-field {
   font-size: 12px;
   color: #5F6775;
   top: -9px;
-  transition: all 0.3s cubic-bezier(0.2, 0, 0.03, 1); }
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.03, 1);
+  padding: 1px 5px; }
 
 .data-filed {
   position: relative; }
@@ -1116,9 +1120,17 @@ header {
     color: #595959;
     transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
     pointer-events: none;
-    padding: 1px 5px;
+    padding: 1px 45px 1px 5px;
     background: #fff;
     border-radius: 3px; }
+
+.data-filed input[disabled="disabled"] ~ label.lbl-field, .data-filed select[disabled="disabled"] ~ label.lbl-field {
+  background: transparent; }
+  .data-filed input[disabled="disabled"] ~ label.lbl-field:focus ~ label.lbl-field, .data-filed select[disabled="disabled"] ~ label.lbl-field:focus ~ label.lbl-field {
+    color: #F37021;
+    background: #fff; }
+  .data-filed input[disabled="disabled"] ~ label.lbl-field:valid ~ label.lbl-field, .data-filed select[disabled="disabled"] ~ label.lbl-field:valid ~ label.lbl-field {
+    background: #fff; }
 
 .txt-authentication {
   background: #EAEAEA;
@@ -1244,6 +1256,14 @@ header {
           margin-bottom: 10px; }
         .table-wrap .table-block table tbody tr td .col-12 {
           text-align: center; } }
+
+.table-wrap .table-block table.tbl-change-info {
+  word-wrap: normal;
+  table-layout: unset; }
+  @media (max-width: 1700px) {
+    .table-wrap .table-block table.tbl-change-info {
+      word-wrap: break-word;
+      table-layout: fixed; } }
 
 .caret-left {
   margin-right: 11px; }
@@ -1397,7 +1417,7 @@ header {
     position: absolute;
     top: 1px;
     right: 5px;
-    padding: 2px 5px; }
+    padding: 2px 4px 2px 5px; }
     .file-return .close-file i {
       color: #7C7C7C; }
   .file-return:hover .close-file i {
@@ -1405,6 +1425,41 @@ header {
   .file-return:hover .close-file:hover {
     background: #fff;
     border-radius: 50%; }
+
+.container-open-acc {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 283px;
+  background: url("../img/bg-open-acc.png") no-repeat top center; }
+
+.content-open-acc {
+  background: #fff;
+  padding: 34px 44px;
+  border-radius: 10px; }
+
+.title-open-acc {
+  margin-bottom: 26px;
+  font-weight: 700; }
+
+.foot-confirm {
+  margin-top: 26px;
+  border-top: 1px solid #F37021; }
+
+.accept-terms {
+  padding: 22px 0 25px; }
+  .accept-terms label {
+    color: #7C7C7C; }
+
+.btn-cf-term {
+  display: flex;
+  align-items: center; }
+  .btn-cf-term .btn-confirm-mdl {
+    white-space: nowrap; }
+  .btn-cf-term span {
+    display: block;
+    margin-left: 24px;
+    color: #bfbfbf; }
 
 #back-to-top {
   position: fixed;
