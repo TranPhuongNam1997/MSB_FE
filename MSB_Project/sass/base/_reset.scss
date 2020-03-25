@@ -26,3 +26,9 @@ img{
 label{
   margin-bottom: 0;
 }
+button{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
