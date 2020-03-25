@@ -198,7 +198,7 @@ input[disabled="disabled"]{
 }
 
 .size-modal-big{
-  max-width: 62%;
+  max-width: 64%;
   width: 100%;
   margin: auto;
   position: fixed;
@@ -252,9 +252,16 @@ input[disabled="disabled"]{
   font-size: 20px;
   margin-bottom: 24px;
   color: #F37021;
+  @include mobile-horizontal{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 }
 .item-zone-panel{
   margin-bottom: 19px;
+  @include mobile{
+    margin-bottom: 10px;
+  }
 }
 .mdl-footer{
   padding: 0 44px 23px;

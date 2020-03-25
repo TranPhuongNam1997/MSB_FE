@@ -362,6 +362,16 @@
   .txt-gender{
     padding-left: 13px;
   }
+  @include mobile{
+    height: auto;
+    margin-bottom: 10px;
+    .dp-flex-between{
+      display: block;
+    }
+    .txt-gender{
+      margin-bottom: 10px;
+    }
+  }
 }
 .item-gender{
   display: inline-block;
@@ -376,8 +386,24 @@
     float: left;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    margin-top: 0px;
+    margin-top: 0;
     cursor: pointer;
+    @media (max-width: 1103px) and (min-width: 992px) {
+      padding: 9px 19px 8px 5px;
+    }
+    @media (max-width: 991px) and (min-width: 768px) {
+      padding: 9px 4px 8px 0;
+    }
+  }
+  input[type="radio"]{
+    @media (max-width: 991px) and (min-width: 768px) {
+      padding: 7px 4px 8px 4px;
+    }
+  }
+  input[type="radio"]:checked:before{
+    @media (max-width: 991px) and (min-width: 768px) {
+      left: 11px;
+    }
   }
 }
 .attacked-info{
@@ -389,10 +415,20 @@
 }
 
 .input-file-container{
+  //position: relative;
+  //width: 351px;
+  //display: inline-block;
+  //margin-right: 15px;
+
   position: relative;
-  width: 351px;
+  width: 335px;
   display: inline-block;
   margin-right: 15px;
+  float: left;
+  @include mobile{
+    width: 100%;
+    margin-right: 0;
+  }
   .input-file {
     position: absolute;
     top: 0;
@@ -438,24 +474,39 @@
 }
 
 .item-profile-block{
-  height: 54px;
-  column-count: 2;
+  //height: 54px;
+  //display: grid;
+  //grid-template-columns: auto auto auto auto;
+
+  //display: inline-grid;
+  //grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  //grid-gap: 1rem;
+  float: left;
+  width: calc(100% - 350px);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  @include mobile-horizontal{
+    width: 100%;
+    margin-top: 15px;
+  }
+  @include mobile{
+    display: block;
+  }
 }
 .file-return{
   position: relative;
   background: #F4F4F4;
   border: 1px solid #EAEAEA;
-  width: 245px;
+  //width: 245px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 3px 33px 3px 12px;
   color: #7C7C7C;
   border-radius: 3px;
-  margin-bottom: 6px;
-  &:nth-child(2n+0){
-    margin-bottom: 0;
-  }
+  //margin-bottom: 6px;
+
   &:hover{
     background: #FCDBC7;
     color: #DA2128;
@@ -479,23 +530,40 @@
       border-radius: 50%;
     }
   }
+  @include mobile{
+    margin-bottom: 10px;
+  }
 }
 
 .container-open-acc{
-  max-width: 1200px;
+  max-width: 1236px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 283px;
   background: url("../img/bg-open-acc.png") no-repeat top center;
+  padding: 283px 18px 0;
+  @include mobile-horizontal{
+    padding: 58px 9px 0;
+    background: none;
+  }
 }
 .content-open-acc{
   background: $c-wh;
   padding: 34px 44px;
   border-radius: 10px;
+  @include mobile-horizontal{
+    padding: 20px 18px;
+  }
+  @include mobile{
+    padding: 15px 9px;
+  }
 }
 .title-open-acc{
   margin-bottom: 26px;
   font-weight: 700;
+  @include mobile-horizontal{
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
 }
 .foot-confirm{
   margin-top: 26px;
@@ -503,6 +571,16 @@
 }
 .accept-terms{
   padding: 22px 0 25px;
+  display: flex;
+  align-items: center;
+  @include mobile-horizontal{
+    padding: 18px 0 18px;
+  }
+  input{
+    margin-bottom: 0;
+    margin-top: 0;
+
+  }
   label{
     color: #7C7C7C;
   }
@@ -513,9 +591,24 @@
   .btn-confirm-mdl{
     white-space: nowrap;
   }
+
   span{
     display: block;
     margin-left: 24px;
     color: #bfbfbf;
   }
+  @include mobile-horizontal{
+    flex-direction: column-reverse;
+    span{
+      margin-bottom: 18px;
+      text-align: center;
+      margin-left: 0;
+    }
+  }
 }
+
+//.file-return1 { grid-area: 1 / 3 / 2 / 4; }
+//.file-return2 { grid-area: 2 / 3 / 3 / 4; }
+//.file-return3 { grid-area: 1 / 1 / 2 / 2; }
+//.file-return4 { grid-area: 1 / 2 / 2 / 3; }
+//.file-return5 { grid-area: 2 / 1 / 3 / 2; }

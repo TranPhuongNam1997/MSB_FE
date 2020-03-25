@@ -249,7 +249,7 @@ input[disabled="disabled"] {
   -webkit-filter: blur(0px); }
 
 .size-modal-big {
-  max-width: 62%;
+  max-width: 64%;
   width: 100%;
   margin: auto;
   position: fixed;
@@ -1393,21 +1393,21 @@ header {
   animation-iteration-count: 1; }
 
 .item-profile-block {
-  height: 54px;
-  column-count: 2; }
+  width: calc(100% - 350px);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); }
 
 .file-return {
   position: relative;
   background: #F4F4F4;
   border: 1px solid #EAEAEA;
-  width: 245px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 3px 33px 3px 12px;
   color: #7C7C7C;
-  border-radius: 3px;
-  margin-bottom: 6px; }
+  border-radius: 3px; }
   .file-return:nth-child(2n+0) {
     margin-bottom: 0; }
   .file-return:hover {

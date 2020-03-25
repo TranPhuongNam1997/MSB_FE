@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fed6bd84-cf0b-4409-b6d7-5bf6034ff100" name="Default Changelist" comment="">
+    <list default="true" id="cff1aabb-6c07-49fd-a5ff-5859483adbf0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/change-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/change-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/css/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/js/select2.full.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/js/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/open-account.html" beforeDir="false" afterPath="$PROJECT_DIR$/open-account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_content.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css.map" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,31 +26,14 @@
       <executable />
     </execution>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1WCKcpBShlNnDtLLUhGWPyzpOhd" />
+  <component name="ProjectId" id="1ZbRNjnlSDPghDLsVKsniJdpdG7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,34 +52,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fed6bd84-cf0b-4409-b6d7-5bf6034ff100" name="Default Changelist" comment="" />
-      <created>1578648218995</created>
+      <changelist id="cff1aabb-6c07-49fd-a5ff-5859483adbf0" name="Default Changelist" comment="" />
+      <created>1585105768418</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578648218995</updated>
-      <workItem from="1578648220103" duration="2567000" />
-      <workItem from="1578672383278" duration="3156000" />
-      <workItem from="1578706978464" duration="9650000" />
-      <workItem from="1578880253585" duration="6211000" />
-      <workItem from="1578968028424" duration="7672000" />
-      <workItem from="1579051763439" duration="988000" />
-      <workItem from="1579058518140" duration="3248000" />
-      <workItem from="1579147127431" duration="8092000" />
-      <workItem from="1579311967139" duration="3236000" />
-      <workItem from="1579484033819" duration="4486000" />
-      <workItem from="1579501780454" duration="3836000" />
-      <workItem from="1579571585848" duration="1276000" />
-      <workItem from="1580699627611" duration="293000" />
-      <workItem from="1581128679746" duration="2583000" />
-      <workItem from="1581297727230" duration="18764000" />
-      <workItem from="1581328794600" duration="1287000" />
-      <workItem from="1581330516987" duration="281000" />
-      <workItem from="1581384438054" duration="28868000" />
-      <workItem from="1581469300329" duration="12010000" />
-      <workItem from="1581487080133" duration="9585000" />
-      <workItem from="1581513758930" duration="12474000" />
-      <workItem from="1581603670198" duration="14323000" />
-      <workItem from="1581667126892" duration="3265000" />
+      <updated>1585105768418</updated>
+      <workItem from="1585105769644" duration="8461000" />
     </task>
     <servers />
   </component>
@@ -102,9 +69,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
