@@ -214,6 +214,9 @@ input[type="radio"]:checked ~ label{
     background: #e75801;
     transition: all 0.3s;
   }
+  @include mobile{
+    padding: 14px 20px;
+  }
 }
 .btn-close{
   position: absolute;
@@ -221,4 +224,8 @@ input[type="radio"]:checked ~ label{
   right: 35px;
   padding: 5px 7px;
   cursor: pointer;
+  @include mobile-horizontal{
+    top: 17px;
+    right: 13px;
+  }
 }

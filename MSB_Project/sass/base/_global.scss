@@ -205,13 +205,22 @@ input[disabled="disabled"]{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 0 18px;
   @media (max-width: 1700px) {
     max-width: 1200px;
-
+  }
+  @include mobile{
+    padding: 0 9px;
   }
 }
 .mdl-main{
   padding: 41px 29px 17px;
+  @include mobile-horizontal{
+    padding: 17px 18px 17px;
+  }
+  @include mobile{
+    padding: 17px 9px 17px;
+  }
 }
 .modal-content{
   margin: 50px 0;
@@ -221,6 +230,10 @@ input[disabled="disabled"]{
   line-height:  36px;
   margin-bottom: 23px;
   padding-left: 11px;
+  @include mobile-horizontal{
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
 }
 .flow-auto{
   max-height: calc(100vh - 385px);
@@ -266,8 +279,17 @@ input[disabled="disabled"]{
 .mdl-footer{
   padding: 0 44px 23px;
   text-align: right;
+  @include mobile-horizontal{
+    padding: 0 33px 23px;
+  }
+  @include mobile{
+    padding: 0 20px 0;
+  }
   .btn-group-foot{
     border-top: 1px solid #F37021;
     padding: 30px 0;
+    @include mobile-horizontal{
+      padding: 15px 0;
+    }
   }
 }

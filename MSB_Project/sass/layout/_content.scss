@@ -182,6 +182,9 @@
       display: none;
     }
   }
+  @include mobile-horizontal{
+    margin-bottom: 20px;
+  }
 }
 .head-search{
   padding: 21px 27px 6px;
@@ -437,6 +440,9 @@
     opacity: 0;
     padding: 15px 0;
     cursor: pointer;
+    @include mobile{
+      width: 100%;
+    }
   }
   .input-file-trigger {
     padding: 12px 35px;

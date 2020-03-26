@@ -32,7 +32,7 @@
   transition: all 0.3s;
 }
 .menu{
-  li{
+  >li{
     float: left;
     margin: 0 18px;
     position: relative;
@@ -44,26 +44,35 @@
       float: unset;
       border-bottom: 1px solid #EAEAEA;
       margin: 0;
-
+      cursor: pointer;
     }
-    &.active a{
+    &.active > a{
       color: $c-or;
     }
-    &.active a:after{
+    &.active > a:after{
       transform: translateX(-50%) scaleX(1);
       @include tablet{
         transform: scale(1);
         width: 100%;
       }
     }
-    a{
+    > a{
       display: block;
       padding: 38px 0 39px;
       color: #303030;
       font-weight: 700;
       transition: all 0.3s;
       position: relative;
+      i{
+        margin-left: 5px;
+        transition: all 0.3s;
+        @include tablet{
+          position: absolute;
+          right: 7px;
+        }
+      }
       @include tablet{
+        display: inline-block;
         padding: 17px 0;
       }
       &:hover{
@@ -84,11 +93,13 @@
         border-radius: 30px;
         transition: all 0.3s;
         @include tablet{
-          left: 0;
-          transform: scale(1);
-          width: 0;
-          height: 1px;
+          //left: 0;
+          //transform: scale(1);
+          //width: 0;
+          //height: 1px;
+          display: none;
         }
+
       }
       &:hover:after{
         transform: translateX(-50%) scaleX(1);
@@ -98,57 +109,88 @@
           width: 100%;
         }
       }
+      @include tablet{
+        position: unset;
+      }
+    }
+    &.rotate-up{
+      >a{
+        i{
+          transform: rotate(180deg);
+          transition: all 0.3s;
+        }
+      }
     }
 
-  }
-}
+    .nav-dropdown{
+      width: 300px;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.14);
+      display: none;
+      border-radius: 5px;
+      padding: 10px 10px;
+      li{
+        display: block;
+        border-bottom: 1px solid #EAEAEA;
+        &:last-child{
+          border-bottom: none;
+        }
+        a{
+          position: relative;
+          display: block;
+          padding: 15px 5px;
+          transition: all 0.3s;
+          &:hover{
+            color: $c-or;
+            transition: all 0.3s;
+            padding-left: 12px;
+            &:before{
+              opacity: 1;
+              left: 0;
+              transition: all 0.3s;
+            }
+          }
+          &:before{
+            content: "\f0da";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -5px;
+            font: normal normal normal 14px/1 FontAwesome;
+            opacity: 0;
+            transition: all 0.3s;
+          }
 
-//.menu{
-//  li{
-//    float: left;
-//    padding: 0 18px;
-//    position: relative;
-//    cursor: pointer;
-//    &.active a{
-//      color: $c-or;
-//    }
-//    &.active:after{
-//      transform: translateX(-50%) scaleX(1);
-//    }
-//    a{
-//      display: block;
-//      padding: 35px 0 39px;
-//      color: #303030;
-//      font-weight: 700;
-//      transition: all 0.3s;
-//      position: relative;
-//      &:hover{
-//        color: $c-or;
-//        transition: all 0.3s;
-//      }
-//      &:after{
-//        content: '';
-//        position: absolute;
-//        bottom: 0;
-//        width: 100%;
-//        height: 5px;
-//        transform: translateX(-50%) scaleX(0);
-//        left: 50%;
-//        background: $c-or;
-//        z-index: 1;
-//        pointer-events: none;
-//        border-radius: 30px;
-//
-//      }
-//    }
-//    &:hover{
-//      a{
-//        &:after{
-//          transform: translateX(-50%) scaleX(1);
-//          transition: all 0.3s;
-//        }
-//      }
-//    }
-//
-//  }
-//}
+        }
+      }
+      @include tablet{
+        display: block;
+        position: relative;
+        width: 100%;
+        left: 0;
+        transform: unset;
+        padding: 0;
+        box-shadow: none;
+        padding-left: 9px;
+        border-top: 1px solid #EAEAEA;
+      }
+    }
+    &:hover{
+      >a{
+        color: $c-or;
+        &:after{
+          transform: translateX(-50%) scaleX(1);
+        }
+
+      }
+      .nav-dropdown{
+        display: block;
+      }
+    }
+  }
+
+}

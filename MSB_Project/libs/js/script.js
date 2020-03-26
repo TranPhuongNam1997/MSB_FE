@@ -84,12 +84,29 @@ $( document ).ready(function() {
        $(".view-menu-mb").trigger('click');
     });
 
+
+
+
+
+
     if (window.innerWidth < 992) {
         $(".info-user-wrap").hide();
         $(".user-block").click(function () {
             $(".info-user-wrap").toggle();
             $(this).toggleClass("btn-lightx")
-        })
+        });
+
+        // js dropdownmenu
+        $(".nav-dropdown").hide();
+        $('.hasdropdown').click(function () {
+            $(".nav-dropdown").slideUp();
+            $('.hasdropdown').removeClass('rotate-up');
+            if(!$(this).children('ul.nav-dropdown').is(":visible"))
+            {
+                $(this).children('ul.nav-dropdown').slideDown();
+                $(this).addClass('rotate-up'); 
+            }
+        });
     }
 
     $(".close-file").click(function () {
