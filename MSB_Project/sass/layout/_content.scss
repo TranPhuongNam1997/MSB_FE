@@ -6,6 +6,7 @@
   position: relative;
   height: 100%;
   background: url("../img/bg-main.png") no-repeat bottom ;
+  background-size: cover;
 }
 .login-block{
 
@@ -323,15 +324,17 @@
 
 }
 .view-right{
+  color: $c-59;
   img{
     margin-right: 6px;
     vertical-align: text-top;
   }
   span{
-    color: $c-59;
+
   }
   &:hover{
     text-decoration: underline;
+    color: $c-or;
   }
 }
 .view-info.chang-info-column{

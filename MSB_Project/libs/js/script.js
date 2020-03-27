@@ -1,4 +1,12 @@
 $( document ).ready(function() {
+
+    var getwidth = $('.data-filed .datepicker-msb-none').width();
+    $('.xdsoft_datetimepicker.xdsoft_noselect.xdsoft_').load(function(){
+
+        $(this).css({"width": getwidth +'!important' });
+    });
+    console.log(getwidth + 38);
+
     //select
     $('select').click(function () {
         $(this).toggleClass('select-icon-up');

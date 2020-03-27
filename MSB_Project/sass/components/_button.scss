@@ -140,6 +140,7 @@ input[type="radio"]:checked ~ label{
   border-radius: 3px;
   transition: all 0.3s;
   margin-bottom: 15px;
+  font-weight: 500;
   @include lessdesktop{
     padding: 15px 73px;
   }
@@ -157,6 +158,7 @@ input[type="radio"]:checked ~ label{
   border: none;
   padding: 3px 25px;
   border-radius: 2px;
+  font-weight: 500;
   &:hover{
     background: #DA2128;
     color: $c-wh;
@@ -168,6 +170,7 @@ input[type="radio"]:checked ~ label{
   border: none;
   padding: 3px 25px;
   border-radius: 2px;
+  font-weight: 500;
   &:hover{
     background: #45AA1B;
     color: $c-wh;

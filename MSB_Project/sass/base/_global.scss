@@ -111,10 +111,12 @@ label.error {
 .datepicker-msb-none {
   background: #fff url(../img/icon-cacular.svg) no-repeat center right 12px!important;
   cursor: pointer;
+  -webkit-box-shadow: none;
 }
 input[name="daterange"]{
   background: #fff url(../img/icon-cacular.svg) no-repeat center right 12px!important;
   cursor: pointer;
+  -webkit-box-shadow: none;
 }
 
 .main-wrap{
@@ -137,6 +139,7 @@ input[disabled="disabled"]{
   background: #F4F4F4;
   border: 1px solid #EAEAEA;
   border-radius: 3px;
+  -webkit-box-shadow: none;
 }
 .status-pending{
   color: #D19809;
