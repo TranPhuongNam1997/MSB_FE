@@ -1304,7 +1304,9 @@ header {
 
 .head-search {
   padding: 21px 27px 6px;
-  background: #fff; }
+  background: #fff;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px; }
   @media only screen and (max-width: 1600px) {
     .head-search {
       padding: 21px 18px 6px; } }
@@ -1399,18 +1401,13 @@ header {
   display: block;
   color: #000; }
   .view-info .icon-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    display: none; }
+    padding-left: 5px;
+    vertical-align: text-bottom; }
   .view-info:hover {
     color: #DA2128; }
     .view-info:hover .chang-info {
       background: #FCDBC7;
       color: #DA2128; }
-  .view-info:hover .icon-info {
-    display: block; }
 
 .view-right {
   color: #595959; }
@@ -1729,7 +1726,8 @@ input[type="radio"] {
   padding: 7px 5px 8px 15px;
   float: left;
   border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px; }
+  border-bottom-left-radius: 2px;
+  -webkit-box-shadow: none; }
 
 input[type="radio"]:checked:before {
   content: "";
@@ -1795,7 +1793,7 @@ input[type="radio"]:checked ~ label {
 
 .btn-search {
   height: 50px;
-  background: #FEF6F1;
+  background: #fde8db;
   color: #DA2128;
   padding: 15px 101px;
   border: none;
@@ -1844,6 +1842,7 @@ input[type="radio"]:checked ~ label {
   height: 41px;
   border: none;
   color: #fff;
+  font-weight: 500;
   transition: all 0.3s; }
 
 .btn-cancel {
@@ -1865,7 +1864,8 @@ input[type="radio"]:checked ~ label {
   border-radius: 4px;
   color: #fff;
   border: none;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  font-weight: 500; }
   .btn-confirm-mdl:hover {
     background: #e75801;
     transition: all 0.3s; }

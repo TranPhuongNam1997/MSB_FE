@@ -190,6 +190,8 @@
 .head-search{
   padding: 21px 27px 6px;
   background: $c-wh;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
   @include lessdesktop{
     padding: 21px 18px 6px;
   }
@@ -304,11 +306,13 @@
   display: block;
   color: #000;
   .icon-info{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    display: none;
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
+    //right: 0;
+    //display: none;
+    padding-left: 5px;
+    vertical-align: text-bottom;
   }
   
   &:hover{
@@ -318,9 +322,9 @@
       color: #DA2128;
     }
   }
-  &:hover .icon-info{
-    display: block;
-  }
+  //&:hover .icon-info{
+  //  display: block;
+  //}
 
 }
 .view-right{

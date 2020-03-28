@@ -63,6 +63,7 @@ input[type="radio"] {
   float: left;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
+  -webkit-box-shadow: none;
 }
 input[type="radio"]:checked:before {
   content: "";
@@ -133,7 +134,7 @@ input[type="radio"]:checked ~ label{
 
 .btn-search{
   height: 50px;
-  background: #FEF6F1;
+  background: #fde8db;
   color: #DA2128;
   padding: 15px 101px;
   border: none;
@@ -188,6 +189,7 @@ input[type="radio"]:checked ~ label{
   height: 41px;
   border: none;
   color: $c-wh;
+  font-weight: 500;
   transition: all 0.3s;
 }
 .btn-cancel{
@@ -213,6 +215,7 @@ input[type="radio"]:checked ~ label{
   color: $c-wh;
   border: none;
   transition: all 0.3s;
+  font-weight: 500;
   &:hover{
     background: #e75801;
     transition: all 0.3s;
